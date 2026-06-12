@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services — Motion · Luxury Sensory Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+<script src="assets/tailwind-config.js"></script>
+<link href="assets/site.css" rel="stylesheet"/>
+<style>
+  details.process summary::-webkit-details-marker { display: none; }
+  details.process summary { list-style: none; }
+  details.process .chev { transition: transform .6s var(--ease-luxe); }
+  details.process[open] .chev { transform: rotate(180deg); }
+  details.process .process-body {
+    display: grid; grid-template-rows: 0fr;
+    transition: grid-template-rows .7s var(--ease-luxe);
+  }
+  details.process[open] .process-body { grid-template-rows: 1fr; }
+  details.process .process-body > div { overflow: hidden; }
+</style>
+</head>
+<body class="bg-background text-ink min-h-screen antialiased overflow-x-hidden">
+
+<div class="grain"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full h-[72px] z-50 border-b border-white/5" style="backdrop-filter: blur(20px); background: rgba(13,14,18,.78);">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-[1500px] mx-auto h-full">
+    <div class="flex items-center gap-14">
+      <a href="index.html" aria-label="Motion Sensory home">
+        <img alt="Motion Sensory" class="w-[140px] object-contain" src="Motion%20Sensory%20Logo.png"/>
+      </a>
+      <div class="hidden lg:flex items-center gap-9">
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="index.html">Home</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="about.html">About</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="philosophy.html">Philosophy</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-primary" href="services.html">Services</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="case-studies.html">Case Studies</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="journal.html">Journal</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500 flex items-center gap-1" href="#"><span class="italic font-medium">LA Scenting</span> <span class="material-symbols-outlined text-[12px]">north_east</span></a>
+      </div>
+    </div>
+    <a class="btn-premium magnetic bg-ink text-background px-7 py-2.5 text-[10px] uppercase tracking-[0.28em] font-semibold hover:bg-primary transition-colors duration-500" href="contact.html">Contact Us</a>
+  </div>
+</nav>
+
+<main class="relative">
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-[1500px] mx-auto">
+      <div class="max-w-4xl">
+        <p class="hero-fade text-[11px] uppercase tracking-[0.5em] text-primary font-semibold mb-10">What We Do</p>
+        <h1 style="font-size: clamp(44px, 6.2vw, 96px); line-height: 1.08; letter-spacing: -0.015em;">
+          <span class="line-mask line-delay-1"><span class="font-extralight">Designing through</span></span>
+          <span class="line-mask line-delay-2"><span class="italic font-thin text-ink-dim">the senses.</span></span>
+        </h1>
+        <p class="hero-fade text-[19px] leading-[1.75] text-ink-dim font-light max-w-2xl border-t border-white/10 pt-10 mt-14">We are the architects of your brand's sensory DNA, taking a holistic strategic, experiential and operational approach to create closer affinity to your brand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SENSES STRIP ============ -->
+  <section class="border-y border-white/5 bg-surface-lowest">
+    <div class="max-w-[1500px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+      <div class="p-10 lg:border-r border-white/5 group reveal-up">
+        <p class="text-[10px] tracking-[0.4em] text-primary font-semibold mb-4">I</p>
+        <h3 class="text-[22px] font-extralight mb-3 group-hover:text-primary transition-colors duration-500">Scent</h3>
+        <p class="text-[13px] leading-relaxed text-ink-dim font-light">The most primal trigger of memory and desire.</p>
+      </div>
+      <div class="p-10 lg:border-r border-white/5 group reveal-up stagger-1">
+        <p class="text-[10px] tracking-[0.4em] text-primary font-semibold mb-4">II</p>
+        <h3 class="text-[22px] font-extralight mb-3 group-hover:text-primary transition-colors duration-500">Sound</h3>
+        <p class="text-[13px] leading-relaxed text-ink-dim font-light">Sonic landscapes echo culture and mood.</p>
+      </div>
+      <div class="p-10 lg:border-r border-white/5 group reveal-up stagger-2">
+        <p class="text-[10px] tracking-[0.4em] text-primary font-semibold mb-4">III</p>
+        <h3 class="text-[22px] font-extralight mb-3 group-hover:text-primary transition-colors duration-500">Sight</h3>
+        <p class="text-[13px] leading-relaxed text-ink-dim font-light">Light, motion, and colour capture anticipation.</p>
+      </div>
+      <div class="p-10 lg:border-r border-white/5 group reveal-up stagger-3">
+        <p class="text-[10px] tracking-[0.4em] text-primary font-semibold mb-4">IV</p>
+        <h3 class="text-[22px] font-extralight mb-3 group-hover:text-primary transition-colors duration-500">Taste</h3>
+        <p class="text-[13px] leading-relaxed text-ink-dim font-light">Flavours and rituals mirror the brand's essence.</p>
+      </div>
+      <div class="p-10 group reveal-up stagger-4">
+        <p class="text-[10px] tracking-[0.4em] text-primary font-semibold mb-4">V</p>
+        <h3 class="text-[22px] font-extralight mb-3 group-hover:text-primary transition-colors duration-500">Touch</h3>
+        <p class="text-[13px] leading-relaxed text-ink-dim font-light">Tactile detail signals quality and invites participation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THREE PILLARS ============ -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto">
+    <div class="mb-28 reveal-up">
+      <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-5 block">Capabilities</span>
+      <h2 class="text-[40px] md:text-[56px] font-extralight leading-[1.12]">Three <span class="italic font-thin text-ink-dim">Pillars</span></h2>
+    </div>
+
+    <div class="space-y-[160px]">
+
+      <!-- Pillar 01 -->
+      <article class="project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+        <div class="md:col-span-6 overflow-hidden bg-surface-low aspect-[4/3] relative reveal-up">
+          <img alt="Sensory branding" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="Sensory%20Branding.png"/>
+        </div>
+        <div class="md:col-span-6 space-y-8 md:pl-20 reveal-up stagger-1">
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Pillar 01</span>
+          <h3 class="text-[32px] md:text-[44px] font-extralight leading-tight">Sensory Branding</h3>
+          <ul class="space-y-4 pt-2">
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Sensory audit &amp; strategic advisory</li>
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Scent curation &amp; production</li>
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Sonic curation &amp; production</li>
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Spatial curation &amp; material styling</li>
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Sensory system integration</li>
+          </ul>
+        </div>
+        <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
+      </article>
+
+      <!-- Pillar 02 -->
+      <article class="project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+        <div class="md:col-span-6 order-2 md:order-1 space-y-8 md:pr-20 reveal-up stagger-1">
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Pillar 02</span>
+          <h3 class="text-[32px] md:text-[44px] font-extralight leading-tight">Experiential Events</h3>
+          <ul class="space-y-4 pt-2">
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Event planning &amp; programming</li>
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Brand activations</li>
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Experiential event tech</li>
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Signature live sets &amp; experiences</li>
+          </ul>
+          <blockquote class="border-l border-primary/40 pl-6 pt-2">
+            <p class="text-[14px] leading-[1.8] text-ink-dim font-light italic">"Fragrance bars &amp; workshops: Guests reconnect with themselves and connect with the brand through interactive scent blending."</p>
+            <cite class="text-[10px] uppercase tracking-[0.25em] text-primary font-semibold not-italic mt-3 block">Featured Capability</cite>
+          </blockquote>
+        </div>
+        <div class="md:col-span-6 order-1 md:order-2 overflow-hidden bg-surface-low aspect-[4/3] relative reveal-up">
+          <img alt="Experiential events" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="Experiential%20Events.png"/>
+        </div>
+        <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
+      </article>
+
+      <!-- Pillar 03 -->
+      <article class="project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+        <div class="md:col-span-6 overflow-hidden bg-surface-low aspect-[4/3] relative reveal-up">
+          <img alt="Communications and storytelling" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="Communications%20Storytelling.jpg"/>
+        </div>
+        <div class="md:col-span-6 space-y-8 md:pl-20 reveal-up stagger-1">
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Pillar 03</span>
+          <h3 class="text-[32px] md:text-[44px] font-extralight leading-tight">Communications &amp; Storytelling</h3>
+          <ul class="space-y-4 pt-2">
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Brand films &amp; showreels</li>
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Marketing communications &amp; campaigns</li>
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Vision &amp; culture activations</li>
+            <li class="flex items-center gap-4 text-[15px] text-ink-dim font-light"><span class="w-5 h-px bg-primary/50"></span>Digital installations</li>
+          </ul>
+        </div>
+        <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ THE FRAGRANCE BAR ============ -->
+  <section class="py-section-gap bg-surface-lowest border-y border-white/5 overflow-hidden">
+    <div class="max-w-[1500px] mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="flex flex-col md:flex-row items-center gap-20">
+        <div class="w-full md:w-[42%] reveal-up">
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-5 block">Interactive Experience</span>
+          <h2 class="text-[36px] md:text-[48px] font-extralight leading-[1.12] mb-10">The Fragrance <span class="italic font-thin text-ink-dim">Bar</span></h2>
+          <p class="text-[16px] leading-[1.8] text-ink-dim font-light mb-12">A living, interactive scent atelier where guests don't just smell a brand, they interact and create their own scent in real time. Designed as either a built-in gallery exhibit or mobile trolley.</p>
+          <ul class="space-y-8">
+            <li class="flex items-start gap-5 group cursor-default">
+              <span class="material-symbols-outlined text-primary mt-1 transition-transform group-hover:scale-125 duration-500">brush</span>
+              <div>
+                <h4 class="text-[15px] font-semibold mb-1 group-hover:text-primary transition-colors duration-500">Guided Scent Encounter</h4>
+                <p class="text-[14px] leading-relaxed text-ink-dim font-light">Introduction to natural and rare fragrances evokes emotion before naming notes.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-5 group cursor-default">
+              <span class="material-symbols-outlined text-primary mt-1 transition-transform group-hover:scale-125 duration-500">science</span>
+              <div>
+                <h4 class="text-[15px] font-semibold mb-1 group-hover:text-primary transition-colors duration-500">Intuitive Formulation</h4>
+                <p class="text-[14px] leading-relaxed text-ink-dim font-light">Led by emotion rather than rules, guests experiment to create a personal keepsake.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full md:w-[58%] relative group reveal-up stagger-1">
+          <div class="aspect-[16/10] overflow-hidden border border-white/5 industry-tile">
+            <img alt="Fragrance bar workshop" class="w-full h-full object-cover" src="Fragrance%20bars%20and%20Workshops.jpg"/>
+          </div>
+          <div class="absolute -bottom-8 -left-8 w-24 h-24 border border-primary/20 backdrop-blur-3xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1100px] mx-auto">
+    <div class="text-center mb-24 reveal-up">
+      <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-5 block">Our Process</span>
+      <h2 class="text-[40px] md:text-[56px] font-extralight leading-[1.12] mb-7">Concept to <span class="italic font-thin text-ink-dim">Integration</span></h2>
+      <p class="text-[16px] leading-[1.8] text-ink-dim font-light max-w-xl mx-auto">At Motion Sensory, we unify creative intent, technical precision, and emotional consistency under one roof.</p>
+    </div>
+
+    <div class="reveal-up stagger-1">
+      <details class="process group border-t border-white/10" open>
+        <summary class="flex items-baseline justify-between gap-8 py-10 cursor-pointer" data-cursor>
+          <div class="flex items-baseline gap-10">
+            <span class="text-[11px] tracking-[0.3em] text-primary font-semibold">01</span>
+            <span class="text-[22px] md:text-[30px] font-extralight">Understanding the Brand</span>
+          </div>
+          <span class="chev material-symbols-outlined text-ink-faint">expand_more</span>
+        </summary>
+        <div class="process-body"><div>
+          <p class="text-[15px] leading-[1.8] text-ink-dim font-light pb-10 md:pl-[74px] max-w-2xl">Defining the DNA to ensure the fragrance completes the design rather than just complementing it. This phase involves deep stakeholder interviews and brand material analysis.</p>
+        </div></div>
+      </details>
+      <details class="process group border-t border-white/10">
+        <summary class="flex items-baseline justify-between gap-8 py-10 cursor-pointer" data-cursor>
+          <div class="flex items-baseline gap-10">
+            <span class="text-[11px] tracking-[0.3em] text-primary font-semibold">02</span>
+            <span class="text-[22px] md:text-[30px] font-extralight">Designing Identity</span>
+          </div>
+          <span class="chev material-symbols-outlined text-ink-faint">expand_more</span>
+        </summary>
+        <div class="process-body"><div>
+          <p class="text-[15px] leading-[1.8] text-ink-dim font-light pb-10 md:pl-[74px] max-w-2xl">Translation of concept into composition, building layers that mirror the brand's journey. We prototype multiple olfactory profiles for curation.</p>
+        </div></div>
+      </details>
+      <details class="process group border-t border-b border-white/10">
+        <summary class="flex items-baseline justify-between gap-8 py-10 cursor-pointer" data-cursor>
+          <div class="flex items-baseline gap-10">
+            <span class="text-[11px] tracking-[0.3em] text-primary font-semibold">03</span>
+            <span class="text-[22px] md:text-[30px] font-extralight">Engineering Experience</span>
+          </div>
+          <span class="chev material-symbols-outlined text-ink-faint">expand_more</span>
+        </summary>
+        <div class="process-body"><div>
+          <p class="text-[15px] leading-[1.8] text-ink-dim font-light pb-10 md:pl-[74px] max-w-2xl">Technical integration through airflow mapping, coverage calculation, and DMX synchronization to ensure consistency across any scale of space.</p>
+        </div></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ QUOTE + CTA ============ -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop text-center relative overflow-hidden border-t border-white/5">
+    <div class="light-bloom absolute inset-0 opacity-60"></div>
+    <div class="relative z-10 max-w-3xl mx-auto reveal-up">
+      <span class="material-symbols-outlined text-primary/40 text-[44px] mb-8 block">format_quote</span>
+      <h2 class="text-[28px] md:text-[40px] font-extralight leading-[1.3] italic text-ink-dim mb-14">"The senses are the portal through which the external world becomes an internal reality."</h2>
+      <a class="btn-premium magnetic inline-flex items-center gap-4 bg-ink text-background px-12 py-5 text-[11px] uppercase tracking-[0.25em] font-semibold hover:bg-primary transition-colors duration-500 group" href="contact.html">Enquire Now <span class="material-symbols-outlined text-[16px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></a>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="w-full py-32 bg-surface-lowest border-t border-white/5">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto">
+    <div class="md:col-span-4 space-y-10 reveal-up">
+      <img alt="Motion Sensory" class="h-8 opacity-90 object-contain object-left" src="Motion%20Sensory%20Logo.png"/>
+      <p class="text-[15px] leading-[1.8] text-ink-dim font-light max-w-xs">
+        Singapore-based sensory design agency crafting atmospheric excellence for the global elite.
+      </p>
+      <div class="flex gap-6">
+        <a aria-label="Website" class="text-ink-faint hover:text-primary transition-colors duration-500" href="#"><span class="material-symbols-outlined text-[22px]">public</span></a>
+        <a aria-label="Instagram" class="text-ink-faint hover:text-primary transition-colors duration-500" href="#"><span class="material-symbols-outlined text-[22px]">photo_camera</span></a>
+        <a aria-label="Email" class="text-ink-faint hover:text-primary transition-colors duration-500" href="#"><span class="material-symbols-outlined text-[22px]">mail</span></a>
+      </div>
+    </div>
+    <div class="md:col-span-2 space-y-8 reveal-up stagger-1">
+      <h4 class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Studio</h4>
+      <nav class="flex flex-col gap-4">
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="index.html">Home</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="about.html">About</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="philosophy.html">Philosophy</a>
+        <a class="text-[14px] text-primary font-light" href="services.html">Services</a>
+      </nav>
+    </div>
+    <div class="md:col-span-2 space-y-8 reveal-up stagger-2">
+      <h4 class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Archive</h4>
+      <nav class="flex flex-col gap-4">
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="case-studies.html">Case Studies</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="journal.html">Journal</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="#">Exhibitions</a>
+      </nav>
+    </div>
+    <div class="md:col-span-4 space-y-8 reveal-up stagger-3">
+      <h4 class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Locations</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div>
+          <p class="text-[14px] text-ink font-light">Singapore</p>
+          <p class="text-[10px] text-ink-faint uppercase tracking-widest mt-1 font-semibold">HQ &amp; Lab</p>
+        </div>
+        <div>
+          <p class="text-[14px] text-ink font-light">Middle East</p>
+          <p class="text-[10px] text-ink-faint uppercase tracking-widest mt-1 font-semibold">Dubai &amp; Abu Dhabi</p>
+        </div>
+      </div>
+      <div class="pt-16 border-t border-white/5">
+        <p class="text-[11px] text-ink-faint/70 uppercase tracking-[0.2em] font-light">© 2026 Motion Pte Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

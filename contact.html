@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact — Motion · Luxury Sensory Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+<script src="assets/tailwind-config.js"></script>
+<link href="assets/site.css" rel="stylesheet"/>
+<style>
+  select.field-luxe option { background: #121317; color: #e8e6e1; }
+  textarea.field-luxe { text-transform: none; letter-spacing: .02em; font-weight: 300; font-size: 15px; line-height: 1.7; resize: vertical; min-height: 120px; }
+</style>
+</head>
+<body class="bg-background text-ink min-h-screen antialiased overflow-x-hidden">
+
+<div class="grain"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full h-[72px] z-50 border-b border-white/5" style="backdrop-filter: blur(20px); background: rgba(13,14,18,.78);">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-[1500px] mx-auto h-full">
+    <div class="flex items-center gap-14">
+      <a href="index.html" aria-label="Motion Sensory home">
+        <img alt="Motion Sensory" class="w-[140px] object-contain" src="Motion%20Sensory%20Logo.png"/>
+      </a>
+      <div class="hidden lg:flex items-center gap-9">
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="index.html">Home</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="about.html">About</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="philosophy.html">Philosophy</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="services.html">Services</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="case-studies.html">Case Studies</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="journal.html">Journal</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500 flex items-center gap-1" href="#"><span class="italic font-medium">LA Scenting</span> <span class="material-symbols-outlined text-[12px]">north_east</span></a>
+      </div>
+    </div>
+    <a class="btn-premium magnetic bg-primary text-background px-7 py-2.5 text-[10px] uppercase tracking-[0.28em] font-semibold transition-colors duration-500" href="contact.html">Contact Us</a>
+  </div>
+</nav>
+
+<main class="relative">
+
+  <!-- ============ PAGE HERO + PROCESS ============ -->
+  <section class="page-hero px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-[1500px] mx-auto">
+      <div class="max-w-4xl">
+        <p class="hero-fade text-[11px] uppercase tracking-[0.5em] text-primary font-semibold mb-10">Begin the Conversation</p>
+        <h1 style="font-size: clamp(44px, 6.2vw, 96px); line-height: 1.08; letter-spacing: -0.015em;">
+          <span class="line-mask line-delay-1"><span class="font-extralight">Architecting</span></span>
+          <span class="line-mask line-delay-2"><span class="italic font-thin text-ink-dim">sensory narrative.</span></span>
+        </h1>
+        <p class="hero-fade text-[19px] leading-[1.75] text-ink-dim font-light max-w-2xl border-t border-white/10 pt-10 mt-14">Our process begins with an echo. We translate your spatial vision into a technical symphony of light, sound, and movement.</p>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 mt-24 hero-fade">
+        <div class="bg-background p-8 group hover:bg-surface-low transition-colors duration-700">
+          <p class="text-[11px] tracking-[0.3em] text-primary font-semibold mb-4">01</p>
+          <h3 class="text-[18px] font-extralight mb-3 group-hover:text-primary transition-colors duration-500">Discovery Call</h3>
+          <p class="text-[13px] leading-relaxed text-ink-dim font-light">Initial alignment on brand DNA, vision, and atmospheric objectives.</p>
+        </div>
+        <div class="bg-background p-8 group hover:bg-surface-low transition-colors duration-700">
+          <p class="text-[11px] tracking-[0.3em] text-primary font-semibold mb-4">02</p>
+          <h3 class="text-[18px] font-extralight mb-3 group-hover:text-primary transition-colors duration-500">Sensory Audit</h3>
+          <p class="text-[13px] leading-relaxed text-ink-dim font-light">Technical analysis of current spatial cues and emotional touchpoints.</p>
+        </div>
+        <div class="bg-background p-8 group hover:bg-surface-low transition-colors duration-700">
+          <p class="text-[11px] tracking-[0.3em] text-primary font-semibold mb-4">03</p>
+          <h3 class="text-[18px] font-extralight mb-3 group-hover:text-primary transition-colors duration-500">Strategy &amp; Design</h3>
+          <p class="text-[13px] leading-relaxed text-ink-dim font-light">Bespoke orchestration of scent, sound, and material signatures.</p>
+        </div>
+        <div class="bg-background p-8 group hover:bg-surface-low transition-colors duration-700">
+          <p class="text-[11px] tracking-[0.3em] text-primary font-semibold mb-4">04</p>
+          <h3 class="text-[18px] font-extralight mb-3 group-hover:text-primary transition-colors duration-500">Implementation</h3>
+          <p class="text-[13px] leading-relaxed text-ink-dim font-light">Precision engineering and ongoing calibration of sensory systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORM + STUDIO INFO ============ -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+
+      <!-- Form -->
+      <div class="lg:col-span-7 reveal-up">
+        <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-5 block">Project Brief</span>
+        <h2 class="text-[36px] md:text-[48px] font-extralight leading-[1.12] mb-8">Brief the <span class="italic font-thin text-ink-dim">studio.</span></h2>
+        <p class="text-[16px] leading-[1.8] text-ink-dim font-light max-w-xl mb-16">Detail your technical and creative ambitions. Our architects provide an integrated experiential and operational approach to create closer affinity to your brand.</p>
+
+        <form action="contact-success.html" class="space-y-12" method="get">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-name">Identity</label>
+              <input class="field-luxe" id="f-name" name="name" placeholder="Full name / agency" required type="text"/>
+            </div>
+            <div>
+              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-email">Correspondence</label>
+              <input class="field-luxe" id="f-email" name="email" placeholder="Email address" required type="email"/>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-territory">Engagement Territory</label>
+              <select class="field-luxe" id="f-territory" name="territory">
+                <option>Singapore</option>
+                <option>Asia Pacific</option>
+                <option>Middle East</option>
+                <option>International</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-interest">Primary Interest</label>
+              <select class="field-luxe" id="f-interest" name="interest">
+                <option>Sensory Branding</option>
+                <option>Experiential Events</option>
+                <option>Communications &amp; Storytelling</option>
+                <option>System Integration</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-objectives">Sensory Objectives</label>
+            <textarea class="field-luxe" id="f-objectives" name="objectives" placeholder="Detail your project goals, desired behavioral outcomes, and architectural context..." rows="4"></textarea>
+          </div>
+          <button class="btn-premium magnetic bg-ink text-background px-12 py-5 text-[11px] uppercase tracking-[0.25em] font-semibold hover:bg-primary transition-colors duration-500 inline-flex items-center gap-4 group" type="submit">Initialize Project <span class="material-symbols-outlined text-[16px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></button>
+        </form>
+      </div>
+
+      <!-- Studio info -->
+      <aside class="lg:col-span-5 space-y-14 reveal-up stagger-1">
+        <div class="border border-white/5 bg-surface-low p-12 relative overflow-hidden group">
+          <div class="light-bloom absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+          <div class="relative">
+            <p class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-4">Global HQ</p>
+            <h3 class="text-[28px] font-extralight mb-6">Singapore</h3>
+            <p class="text-[14px] leading-[1.9] text-ink-dim font-light mb-10">Founded in Singapore,<br/>Grounded in Asia Pacific,<br/>Growing in the Middle East.</p>
+            <div class="space-y-5 border-t border-white/10 pt-8">
+              <div>
+                <p class="text-[10px] uppercase tracking-[0.25em] text-ink-faint font-semibold">Chief Sensory Officer</p>
+                <p class="text-[15px] font-light mt-1">Juliana Mattar</p>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase tracking-[0.25em] text-ink-faint font-semibold">Creative Director (Scent)</p>
+                <p class="text-[15px] font-light mt-1">Aaliyah Hamdoon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border border-white/5 bg-surface-low p-12 relative overflow-hidden group">
+          <div class="light-bloom absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+          <div class="relative">
+            <p class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-4">Regional Hub</p>
+            <h3 class="text-[28px] font-extralight mb-6">Middle East</h3>
+            <p class="text-[14px] leading-[1.9] text-ink-dim font-light mb-10">Dubai &amp; Abu Dhabi Gateway.<br/>Sensorial experiences that<br/>move the human spirit.</p>
+            <div class="space-y-3 border-t border-white/10 pt-8">
+              <a class="block text-[14px] font-light text-ink-dim hover:text-primary transition-colors duration-500" href="mailto:uae@motionsensory.com">uae@motionsensory.com</a>
+              <a class="block text-[14px] font-light text-ink-dim hover:text-primary transition-colors duration-500" href="mailto:qatar@motionsensory.com">qatar@motionsensory.com</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ REGIONS ============ -->
+  <section class="py-section-gap bg-surface-lowest border-t border-white/5">
+    <div class="px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto">
+      <div class="mb-24 reveal-up">
+        <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-5 block">Where We Make Impact</span>
+        <h2 class="text-[40px] md:text-[56px] font-extralight leading-[1.12] mb-8">Active sensory <span class="italic font-thin text-ink-dim">infrastructure.</span></h2>
+        <p class="text-[16px] leading-[1.8] text-ink-dim font-light max-w-2xl">22 years of multi-sensory expertise shaping experiences across Asia Pacific and the Middle East. Our technicians are deployed across key global hubs to ensure sensory integrity.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 border-t border-white/10">
+        <div class="py-12 md:pr-10 md:border-r border-white/5 reveal-up">
+          <h3 class="text-[24px] font-extralight mb-2">Singapore</h3>
+          <p class="text-[10px] uppercase tracking-[0.25em] text-primary font-semibold">Global Headquarters</p>
+        </div>
+        <div class="py-12 md:px-10 md:border-r border-white/5 reveal-up stagger-1">
+          <h3 class="text-[24px] font-extralight mb-2">Asia Pacific</h3>
+          <p class="text-[10px] uppercase tracking-[0.25em] text-ink-faint font-semibold">Tokyo · Shanghai · Bangkok · Sydney</p>
+        </div>
+        <div class="py-12 md:pl-10 reveal-up stagger-2">
+          <h3 class="text-[24px] font-extralight mb-2">Middle East</h3>
+          <p class="text-[10px] uppercase tracking-[0.25em] text-ink-faint font-semibold">Dubai · Abu Dhabi · Doha</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="w-full py-32 bg-surface-lowest border-t border-white/5">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto">
+    <div class="md:col-span-4 space-y-10 reveal-up">
+      <img alt="Motion Sensory" class="h-8 opacity-90 object-contain object-left" src="Motion%20Sensory%20Logo.png"/>
+      <p class="text-[15px] leading-[1.8] text-ink-dim font-light max-w-xs">
+        Poetic engineering for the senses. Technical excellence for the soul.
+      </p>
+      <div class="flex gap-6">
+        <a aria-label="Website" class="text-ink-faint hover:text-primary transition-colors duration-500" href="#"><span class="material-symbols-outlined text-[22px]">public</span></a>
+        <a aria-label="Instagram" class="text-ink-faint hover:text-primary transition-colors duration-500" href="#"><span class="material-symbols-outlined text-[22px]">photo_camera</span></a>
+        <a aria-label="Email" class="text-ink-faint hover:text-primary transition-colors duration-500" href="#"><span class="material-symbols-outlined text-[22px]">mail</span></a>
+      </div>
+    </div>
+    <div class="md:col-span-2 space-y-8 reveal-up stagger-1">
+      <h4 class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Studio</h4>
+      <nav class="flex flex-col gap-4">
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="index.html">Home</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="about.html">About</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="philosophy.html">Philosophy</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="services.html">Services</a>
+      </nav>
+    </div>
+    <div class="md:col-span-2 space-y-8 reveal-up stagger-2">
+      <h4 class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Archive</h4>
+      <nav class="flex flex-col gap-4">
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="case-studies.html">Case Studies</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="journal.html">Journal</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="#">Exhibitions</a>
+      </nav>
+    </div>
+    <div class="md:col-span-4 space-y-8 reveal-up stagger-3">
+      <h4 class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Locations</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div>
+          <p class="text-[14px] text-ink font-light">Singapore</p>
+          <p class="text-[10px] text-ink-faint uppercase tracking-widest mt-1 font-semibold">HQ &amp; Lab</p>
+        </div>
+        <div>
+          <p class="text-[14px] text-ink font-light">Middle East</p>
+          <p class="text-[10px] text-ink-faint uppercase tracking-widest mt-1 font-semibold">Dubai &amp; Abu Dhabi</p>
+        </div>
+      </div>
+      <div class="pt-16 border-t border-white/5">
+        <p class="text-[11px] text-ink-faint/70 uppercase tracking-[0.2em] font-light">© 2026 Motion Pte Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

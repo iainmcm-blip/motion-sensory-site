@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Message Received — Motion · Luxury Sensory Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+<script src="assets/tailwind-config.js"></script>
+<link href="assets/site.css" rel="stylesheet"/>
+<style>
+  @keyframes success-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(191,194,255,.35); }
+    70% { box-shadow: 0 0 0 28px rgba(191,194,255,0); }
+    100% { box-shadow: 0 0 0 0 rgba(191,194,255,0); }
+  }
+  .success-ring { animation: success-pulse 2s infinite; border-radius: 9999px; }
+</style>
+</head>
+<body class="bg-background text-ink min-h-screen antialiased overflow-x-hidden">
+
+<div class="grain"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full h-[72px] z-50 border-b border-white/5" style="backdrop-filter: blur(20px); background: rgba(13,14,18,.78);">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-[1500px] mx-auto h-full">
+    <div class="flex items-center gap-14">
+      <a href="index.html" aria-label="Motion Sensory home">
+        <img alt="Motion Sensory" class="w-[140px] object-contain" src="Motion%20Sensory%20Logo.png"/>
+      </a>
+      <div class="hidden lg:flex items-center gap-9">
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="index.html">Home</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="about.html">About</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="philosophy.html">Philosophy</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="services.html">Services</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="case-studies.html">Case Studies</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="journal.html">Journal</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500 flex items-center gap-1" href="#"><span class="italic font-medium">LA Scenting</span> <span class="material-symbols-outlined text-[12px]">north_east</span></a>
+      </div>
+    </div>
+    <a class="btn-premium magnetic bg-ink text-background px-7 py-2.5 text-[10px] uppercase tracking-[0.28em] font-semibold hover:bg-primary transition-colors duration-500" href="contact.html">Contact Us</a>
+  </div>
+</nav>
+
+<main class="relative min-h-screen flex items-center justify-center text-center px-margin-mobile md:px-margin-desktop overflow-hidden">
+  <div class="light-bloom absolute inset-0 opacity-70"></div>
+  <div class="relative z-10 max-w-2xl mx-auto py-48">
+    <div class="hero-fade inline-flex items-center justify-center w-24 h-24 success-ring border border-primary/40 mb-14">
+      <span class="material-symbols-outlined text-primary text-[44px]">check_circle</span>
+    </div>
+    <h1 style="font-size: clamp(40px, 5vw, 72px); line-height: 1.1; letter-spacing: -0.015em;">
+      <span class="line-mask line-delay-1"><span class="font-extralight">Inception <span class="italic font-thin text-ink-dim">initialized.</span></span></span>
+    </h1>
+    <p class="hero-fade text-[17px] leading-[1.85] text-ink-dim font-light max-w-xl mx-auto mt-10 mb-16">Thank you for reaching out. Our architects are reviewing your project brief and will contact you within 48 hours to discuss your sensory narrative.</p>
+    <div class="hero-fade flex flex-col sm:flex-row items-center justify-center gap-6">
+      <a class="btn-premium magnetic bg-ink text-background px-10 py-5 text-[11px] uppercase tracking-[0.25em] font-semibold hover:bg-primary transition-colors duration-500" href="index.html">Return Home</a>
+      <a class="link-line text-[11px] uppercase tracking-[0.25em] font-semibold pb-1 text-ink-dim hover:text-primary transition-colors duration-500 inline-flex items-center gap-3" href="journal.html">Explore Our Journal <span class="material-symbols-outlined text-[16px]">east</span></a>
+    </div>
+    <p class="hero-fade text-[9px] uppercase tracking-[0.4em] text-ink-faint/60 font-semibold mt-24">Motion Narrative Protocol v2.6</p>
+  </div>
+</main>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

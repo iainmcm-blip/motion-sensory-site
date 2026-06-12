@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Studies — Motion · Luxury Sensory Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+<script src="assets/tailwind-config.js"></script>
+<link href="assets/site.css" rel="stylesheet"/>
+<style>
+  .filter-chip {
+    transition: color .5s ease, border-color .5s ease, background-color .5s ease;
+  }
+  .filter-chip.active {
+    color: #0d0e12; background: #e8e6e1; border-color: #e8e6e1;
+  }
+  .case-item { transition: opacity .7s var(--ease-luxe), transform .7s var(--ease-luxe); }
+  .case-item.filtered-out { opacity: 0; transform: scale(.97); pointer-events: none; position: absolute; visibility: hidden; }
+</style>
+</head>
+<body class="bg-background text-ink min-h-screen antialiased overflow-x-hidden">
+
+<div class="grain"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full h-[72px] z-50 border-b border-white/5" style="backdrop-filter: blur(20px); background: rgba(13,14,18,.78);">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-[1500px] mx-auto h-full">
+    <div class="flex items-center gap-14">
+      <a href="index.html" aria-label="Motion Sensory home">
+        <img alt="Motion Sensory" class="w-[140px] object-contain" src="Motion%20Sensory%20Logo.png"/>
+      </a>
+      <div class="hidden lg:flex items-center gap-9">
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="index.html">Home</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="about.html">About</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="philosophy.html">Philosophy</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="services.html">Services</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-primary" href="case-studies.html">Case Studies</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="journal.html">Journal</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500 flex items-center gap-1" href="#"><span class="italic font-medium">LA Scenting</span> <span class="material-symbols-outlined text-[12px]">north_east</span></a>
+      </div>
+    </div>
+    <a class="btn-premium magnetic bg-ink text-background px-7 py-2.5 text-[10px] uppercase tracking-[0.28em] font-semibold hover:bg-primary transition-colors duration-500" href="contact.html">Contact Us</a>
+  </div>
+</nav>
+
+<main class="relative">
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-[1500px] mx-auto">
+      <div class="max-w-4xl">
+        <p class="hero-fade text-[11px] uppercase tracking-[0.5em] text-primary font-semibold mb-10">Impact Archive</p>
+        <h1 style="font-size: clamp(44px, 6.2vw, 96px); line-height: 1.08; letter-spacing: -0.015em;">
+          <span class="line-mask line-delay-1"><span class="font-extralight">Selected works of</span></span>
+          <span class="line-mask line-delay-2"><span class="italic font-thin text-ink-dim">immersive resonance.</span></span>
+        </h1>
+        <p class="hero-fade text-[19px] leading-[1.75] text-ink-dim font-light max-w-2xl border-t border-white/10 pt-10 mt-14">A curated anthology of sensory-led consultancy results designed to move brands forward and people into action.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="hero-fade flex flex-wrap gap-3 mt-16" id="filters">
+        <button class="filter-chip active text-[10px] uppercase tracking-[0.25em] font-semibold px-6 py-3 border border-white/15 text-ink-dim" data-filter="all">All Works</button>
+        <button class="filter-chip text-[10px] uppercase tracking-[0.25em] font-semibold px-6 py-3 border border-white/15 text-ink-dim" data-filter="hospitality">Hospitality</button>
+        <button class="filter-chip text-[10px] uppercase tracking-[0.25em] font-semibold px-6 py-3 border border-white/15 text-ink-dim" data-filter="retail">Retail</button>
+        <button class="filter-chip text-[10px] uppercase tracking-[0.25em] font-semibold px-6 py-3 border border-white/15 text-ink-dim" data-filter="aviation">Aviation</button>
+        <button class="filter-chip text-[10px] uppercase tracking-[0.25em] font-semibold px-6 py-3 border border-white/15 text-ink-dim" data-filter="finance">Finance</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASES ============ -->
+  <section class="pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto relative">
+    <div class="space-y-[140px]" id="case-list">
+
+      <!-- Changi (featured) -->
+      <a class="case-item project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal-up block" data-category="aviation" href="portfolio-changi.html">
+        <div class="md:col-span-7 overflow-hidden bg-surface-low aspect-[16/10] relative">
+          <img alt="Changi Airport scent identity" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="Changi%20Airport%20Scent.png"/>
+          <div class="absolute top-6 left-6"><span class="text-[9px] uppercase tracking-[0.3em] text-ink font-semibold border border-white/25 px-4 py-2 backdrop-blur-md" style="background: rgba(13,14,18,.55);">Featured</span></div>
+        </div>
+        <div class="md:col-span-5 space-y-7 md:pl-20">
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Aviation &amp; Atmosphere</span>
+          <h3 class="text-[30px] md:text-[40px] font-extralight leading-tight">Building the world's first airport scent identity</h3>
+          <p class="text-[15px] leading-[1.8] text-ink-dim font-light">A signature scent for Changi Airport that transforms transit into memory. Orchid Tea — a serene, modern florality designed to soothe diverse travellers and enhance emotional well-being across terminals.</p>
+          <div class="grid grid-cols-2 gap-8 pt-2">
+            <div><p class="text-[22px] font-thin text-primary">40%</p><p class="text-[9px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Stress Reduction</p></div>
+            <div><p class="text-[22px] font-thin text-primary">+20%</p><p class="text-[9px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Retail Dwell</p></div>
+          </div>
+          <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500 pt-2">Explore Deep Dive <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
+        </div>
+        <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
+      </a>
+
+      <!-- Aesop -->
+      <a class="case-item project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal-up block" data-category="retail" href="portfolio-aesop.html">
+        <div class="md:col-span-5 order-2 md:order-1 space-y-7 md:pr-20 md:text-right">
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Retail / Immersive Storytelling</span>
+          <h3 class="text-[30px] md:text-[40px] font-extralight leading-tight">New sensory dimensions in immersive storytelling</h3>
+          <p class="text-[15px] leading-[1.8] text-ink-dim font-light">Our long-running partnership with Aesop demonstrates how sensory-led brand worlds translate abstract philosophy into lived, memorable experiences through tactile architecture and scent.</p>
+          <div class="grid grid-cols-2 gap-8 pt-2">
+            <div><p class="text-[22px] font-thin text-primary">28%</p><p class="text-[9px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Sales Uplift</p></div>
+            <div><p class="text-[22px] font-thin text-primary">3.8M</p><p class="text-[9px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Social Reach</p></div>
+          </div>
+          <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold md:flex-row-reverse group-hover:text-primary transition-colors duration-500 pt-2">Explore Deep Dive <span class="material-symbols-outlined text-[18px] rotate-180 md:rotate-0 group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
+        </div>
+        <div class="md:col-span-7 order-1 md:order-2 overflow-hidden bg-surface-low aspect-[16/10] relative">
+          <img alt="Aesop immersive retail installation" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="Aesop%202.jpg"/>
+        </div>
+        <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
+      </a>
+
+      <!-- Hilton -->
+      <a class="case-item project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal-up block" data-category="hospitality" href="portfolio-hilton.html">
+        <div class="md:col-span-7 overflow-hidden bg-surface-low aspect-[16/10] relative">
+          <img alt="Hilton India brand showcase" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="HIlton%20India%201.png"/>
+        </div>
+        <div class="md:col-span-5 space-y-7 md:pl-20">
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Hospitality / Brand Legacy</span>
+          <h3 class="text-[30px] md:text-[40px] font-extralight leading-tight">A century of hospitality</h3>
+          <p class="text-[15px] leading-[1.8] text-ink-dim font-light">To elevate Hilton's brand leadership in India, we designed a multi-sensory brand showcase anchored in cinematic projection mapping and dynamic soundscapes reflecting their 1919 heritage.</p>
+          <div class="grid grid-cols-2 gap-8 pt-2">
+            <div><p class="text-[22px] font-thin text-primary">12</p><p class="text-[9px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Flagships</p></div>
+            <div><p class="text-[22px] font-thin text-primary">9+</p><p class="text-[9px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Environments</p></div>
+          </div>
+          <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500 pt-2">Explore Deep Dive <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
+        </div>
+        <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
+      </a>
+
+      <!-- Smaller cards: UOB + Airshow -->
+      <div class="case-item grid grid-cols-1 md:grid-cols-2 gap-gutter reveal-up" data-category="finance aviation">
+        <article class="group bg-surface-low border border-white/5 p-12 transition-all duration-700 hover:border-primary/30 hover:-translate-y-2 relative overflow-hidden" data-category="finance">
+          <span class="material-symbols-outlined text-[56px] text-primary/40 group-hover:text-primary transition-colors duration-700 mb-8 block">account_balance</span>
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-4 block">Finance / Sustainability</span>
+          <h3 class="text-[26px] font-extralight mb-3">UOB: The Art of Banking</h3>
+          <h4 class="text-[15px] text-ink-dim font-semibold mb-5">Cultivating Excellence</h4>
+          <p class="text-[15px] leading-[1.8] text-ink-dim font-light mb-8">Connecting UOB's principles with the artistry of bonsai through a cinematic docu-story and immersive leadership masterclasses.</p>
+          <div><p class="text-[20px] font-thin text-primary">High Intent</p><p class="text-[9px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Engagement</p></div>
+          <div class="light-bloom absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none"></div>
+        </article>
+        <article class="group bg-surface-low border border-white/5 p-12 transition-all duration-700 hover:border-primary/30 hover:-translate-y-2 relative overflow-hidden" data-category="aviation">
+          <span class="material-symbols-outlined text-[56px] text-primary/40 group-hover:text-primary transition-colors duration-700 mb-8 block">flight_takeoff</span>
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-4 block">Aviation / Events</span>
+          <h3 class="text-[26px] font-extralight mb-3">Singapore Airshow 2026</h3>
+          <h4 class="text-[15px] text-ink-dim font-semibold mb-5">Timely: Precision Scenting</h4>
+          <p class="text-[15px] leading-[1.8] text-ink-dim font-light mb-8">Scalable scent deployment for Asia's premier aviation stage, mirroring the industry's clarity and forward momentum across a vast exhibition floor.</p>
+          <div><p class="text-[20px] font-thin text-primary">High Volume</p><p class="text-[9px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Scale</p></div>
+          <div class="light-bloom absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop text-center relative overflow-hidden border-t border-white/5">
+    <div class="light-bloom absolute inset-0 opacity-60"></div>
+    <div class="relative z-10 max-w-3xl mx-auto reveal-up">
+      <h2 class="text-[36px] md:text-[52px] font-extralight leading-[1.15] mb-14">Ready to define your brand's <span class="italic font-thin text-ink-dim">sensorial signature?</span></h2>
+      <a class="btn-premium magnetic inline-block bg-ink text-background px-12 py-5 text-[11px] uppercase tracking-[0.25em] font-semibold hover:bg-primary transition-colors duration-500" href="contact.html">Initiate Collaboration</a>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="w-full py-32 bg-surface-lowest border-t border-white/5">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto">
+    <div class="md:col-span-4 space-y-10 reveal-up">
+      <img alt="Motion Sensory" class="h-8 opacity-90 object-contain object-left" src="Motion%20Sensory%20Logo.png"/>
+      <p class="text-[15px] leading-[1.8] text-ink-dim font-light max-w-xs">
+        Singapore-based sensory design agency crafting atmospheric excellence for the global elite.
+      </p>
+      <div class="flex gap-6">
+        <a aria-label="Website" class="text-ink-faint hover:text-primary transition-colors duration-500" href="#"><span class="material-symbols-outlined text-[22px]">public</span></a>
+        <a aria-label="Instagram" class="text-ink-faint hover:text-primary transition-colors duration-500" href="#"><span class="material-symbols-outlined text-[22px]">photo_camera</span></a>
+        <a aria-label="Email" class="text-ink-faint hover:text-primary transition-colors duration-500" href="#"><span class="material-symbols-outlined text-[22px]">mail</span></a>
+      </div>
+    </div>
+    <div class="md:col-span-2 space-y-8 reveal-up stagger-1">
+      <h4 class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Studio</h4>
+      <nav class="flex flex-col gap-4">
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="index.html">Home</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="about.html">About</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="philosophy.html">Philosophy</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="services.html">Services</a>
+      </nav>
+    </div>
+    <div class="md:col-span-2 space-y-8 reveal-up stagger-2">
+      <h4 class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Archive</h4>
+      <nav class="flex flex-col gap-4">
+        <a class="text-[14px] text-primary font-light" href="case-studies.html">Case Studies</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="journal.html">Journal</a>
+        <a class="text-[14px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="#">Exhibitions</a>
+      </nav>
+    </div>
+    <div class="md:col-span-4 space-y-8 reveal-up stagger-3">
+      <h4 class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Locations</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div>
+          <p class="text-[14px] text-ink font-light">Singapore</p>
+          <p class="text-[10px] text-ink-faint uppercase tracking-widest mt-1 font-semibold">HQ &amp; Lab</p>
+        </div>
+        <div>
+          <p class="text-[14px] text-ink font-light">Middle East</p>
+          <p class="text-[10px] text-ink-faint uppercase tracking-widest mt-1 font-semibold">Dubai &amp; Abu Dhabi</p>
+        </div>
+      </div>
+      <div class="pt-16 border-t border-white/5">
+        <p class="text-[11px] text-ink-faint/70 uppercase tracking-[0.2em] font-light">© 2026 Motion Pte Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  const chips = document.querySelectorAll('.filter-chip');
+  const items = document.querySelectorAll('.case-item');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const f = chip.getAttribute('data-filter');
+      items.forEach(item => {
+        const cats = (item.getAttribute('data-category') || '').split(/\s+/);
+        const show = f === 'all' || cats.includes(f);
+        item.classList.toggle('filtered-out', !show);
+        // Within the combined small-card row, also filter the inner articles
+        if (show && item.tagName === 'DIV') {
+          item.querySelectorAll('article[data-category]').forEach(a => {
+            a.style.display = (f === 'all' || a.getAttribute('data-category') === f) ? '' : 'none';
+          });
+        }
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
