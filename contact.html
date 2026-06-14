@@ -10,7 +10,7 @@
 <script src="assets/tailwind-config.js"></script>
 <link href="assets/site.css" rel="stylesheet"/>
 <style>
-  select.field-luxe option { background: #121317; color: #e8e6e1; }
+  select.field-luxe option { background: #1b1630; color: #e8e6e1; }
   textarea.field-luxe { text-transform: none; letter-spacing: .02em; font-weight: 300; font-size: 15px; line-height: 1.7; resize: vertical; min-height: 120px; }
 </style>
 </head>
@@ -93,37 +93,45 @@
         <form action="contact-success.html" class="space-y-12" method="get">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-name">Identity</label>
-              <input class="field-luxe" id="f-name" name="name" placeholder="Full name / agency" required type="text"/>
+              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-name">Full Name</label>
+              <input class="field-luxe" id="f-name" name="name" placeholder="Your name" required type="text"/>
             </div>
             <div>
-              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-email">Correspondence</label>
-              <input class="field-luxe" id="f-email" name="email" placeholder="Email address" required type="email"/>
+              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-email">Email Address</label>
+              <input class="field-luxe" id="f-email" name="email" placeholder="you@company.com" required type="email"/>
             </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-territory">Engagement Territory</label>
-              <select class="field-luxe" id="f-territory" name="territory">
+              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-company">Company / Brand</label>
+              <input class="field-luxe" id="f-company" name="company" placeholder="Organisation" type="text"/>
+            </div>
+            <div>
+              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-interest">Area of Interest</label>
+              <select class="field-luxe" id="f-interest" name="interest">
+                <option>Sensory Branding</option>
+                <option>Experiential Events</option>
+                <option>Communications &amp; Storytelling</option>
+                <option>Scent Systems &amp; Integration</option>
+                <option>Fragrance Bar</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-region">Region / Market</label>
+              <select class="field-luxe" id="f-region" name="region">
                 <option>Singapore</option>
                 <option>Asia Pacific</option>
                 <option>Middle East</option>
                 <option>International</option>
               </select>
             </div>
-            <div>
-              <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-interest">Primary Interest</label>
-              <select class="field-luxe" id="f-interest" name="interest">
-                <option>Sensory Branding</option>
-                <option>Experiential Events</option>
-                <option>Communications &amp; Storytelling</option>
-                <option>System Integration</option>
-              </select>
-            </div>
           </div>
           <div>
-            <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-objectives">Sensory Objectives</label>
-            <textarea class="field-luxe" id="f-objectives" name="objectives" placeholder="Detail your project goals, desired behavioral outcomes, and architectural context..." rows="4"></textarea>
+            <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-brief">Project Brief</label>
+            <textarea class="field-luxe" id="f-brief" name="brief" placeholder="Tell us about your space, brand and ambitions..." rows="4"></textarea>
           </div>
           <button class="btn-premium magnetic bg-ink text-background px-12 py-5 text-[11px] uppercase tracking-[0.25em] font-semibold hover:bg-primary transition-colors duration-500 inline-flex items-center gap-4 group" type="submit">Initialize Project <span class="material-symbols-outlined text-[16px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></button>
         </form>

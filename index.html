@@ -251,56 +251,80 @@
       </div>
     </div>
 
-    <div class="reveal-up stagger-1" id="services-list">
-      <a class="service-row group flex items-baseline justify-between gap-8 py-10" data-img="Sonic%20Branding.jpg" href="services.html">
-        <div class="flex items-baseline gap-10">
-          <span class="service-num text-[11px] tracking-[0.3em] text-ink-faint font-semibold">01</span>
-          <span class="text-[24px] md:text-[34px] font-extralight">Sonic Branding</span>
-        </div>
-        <span class="service-arrow material-symbols-outlined text-primary text-[22px] hidden md:block">arrow_outward</span>
-      </a>
-      <a class="service-row group flex items-baseline justify-between gap-8 py-10" data-img="Olfactory%20Branding.jpg" href="services.html">
-        <div class="flex items-baseline gap-10">
-          <span class="service-num text-[11px] tracking-[0.3em] text-ink-faint font-semibold">02</span>
-          <span class="text-[24px] md:text-[34px] font-extralight">Olfactory Branding</span>
-        </div>
-        <span class="service-arrow material-symbols-outlined text-primary text-[22px] hidden md:block">arrow_outward</span>
-      </a>
-      <a class="service-row group flex items-baseline justify-between gap-8 py-10" data-img="Environmental%20Diffusion%20Systems.jpg" href="services.html">
-        <div class="flex items-baseline gap-10">
-          <span class="service-num text-[11px] tracking-[0.3em] text-ink-faint font-semibold">03</span>
-          <span class="text-[24px] md:text-[34px] font-extralight">Environmental Diffusion Systems</span>
-        </div>
-        <span class="service-arrow material-symbols-outlined text-primary text-[22px] hidden md:block">arrow_outward</span>
-      </a>
-      <a class="service-row group flex items-baseline justify-between gap-8 py-10" data-img="Fragrance%20bars%20and%20Workshops.jpg" href="services.html">
-        <div class="flex items-baseline gap-10">
-          <span class="service-num text-[11px] tracking-[0.3em] text-ink-faint font-semibold">04</span>
-          <span class="text-[24px] md:text-[34px] font-extralight">Fragrance Bars &amp; Workshops</span>
-        </div>
-        <span class="service-arrow material-symbols-outlined text-primary text-[22px] hidden md:block">arrow_outward</span>
-      </a>
-      <a class="service-row group flex items-baseline justify-between gap-8 py-10" data-img="Signature%20Live%20Sets%20and%20Experiences.jpg" href="services.html">
-        <div class="flex items-baseline gap-10">
-          <span class="service-num text-[11px] tracking-[0.3em] text-ink-faint font-semibold">05</span>
-          <span class="text-[24px] md:text-[34px] font-extralight">Signature Live Sets &amp; Experiences</span>
-        </div>
-        <span class="service-arrow material-symbols-outlined text-primary text-[22px] hidden md:block">arrow_outward</span>
-      </a>
-      <a class="service-row group flex items-baseline justify-between gap-8 py-10" data-img="Curated%20playlists%20and%20Venue%20Sound%20Design.jpg" href="services.html">
-        <div class="flex items-baseline gap-10">
-          <span class="service-num text-[11px] tracking-[0.3em] text-ink-faint font-semibold">06</span>
-          <span class="text-[24px] md:text-[34px] font-extralight">Curated Playlists &amp; Venue Sound</span>
-        </div>
-        <span class="service-arrow material-symbols-outlined text-primary text-[22px] hidden md:block">arrow_outward</span>
-      </a>
-    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter md:gap-20 items-start">
+      <!-- List -->
+      <div class="md:col-span-7 reveal-up stagger-1" id="services-list">
+        <a class="service-row group block py-8" data-key="01" href="services.html">
+          <div class="flex items-baseline justify-between gap-8">
+            <div class="flex items-baseline gap-8"><span class="service-num text-[11px] tracking-[0.3em] text-ink-faint font-semibold">01</span><span class="text-[24px] md:text-[32px] font-extralight">Sonic Branding</span></div>
+            <span class="service-arrow material-symbols-outlined text-primary text-[22px] hidden md:block">arrow_outward</span>
+          </div>
+          <p class="text-[14px] leading-relaxed text-ink-dim font-light mt-3 md:pl-[44px] max-w-xl">Signature sound identities and curated soundscapes that set the pulse of a space.</p>
+        </a>
+        <a class="service-row group block py-8" data-key="02" href="services.html">
+          <div class="flex items-baseline justify-between gap-8">
+            <div class="flex items-baseline gap-8"><span class="service-num text-[11px] tracking-[0.3em] text-ink-faint font-semibold">02</span><span class="text-[24px] md:text-[32px] font-extralight">Olfactory Branding</span></div>
+            <span class="service-arrow material-symbols-outlined text-primary text-[22px] hidden md:block">arrow_outward</span>
+          </div>
+          <p class="text-[14px] leading-relaxed text-ink-dim font-light mt-3 md:pl-[44px] max-w-xl">Bespoke scent identities, mapped and engineered to perform consistently across every space and market.</p>
+        </a>
+        <a class="service-row group block py-8" data-key="03" href="services.html">
+          <div class="flex items-baseline justify-between gap-8">
+            <div class="flex items-baseline gap-8"><span class="service-num text-[11px] tracking-[0.3em] text-ink-faint font-semibold">03</span><span class="text-[24px] md:text-[32px] font-extralight">Environmental Diffusion Systems</span></div>
+            <span class="service-arrow material-symbols-outlined text-primary text-[22px] hidden md:block">arrow_outward</span>
+          </div>
+          <p class="text-[14px] leading-relaxed text-ink-dim font-light mt-3 md:pl-[44px] max-w-xl">Fragrance Pods, Scent Towers and HVAC integration — engineered diffusion at any scale.</p>
+        </a>
+        <a class="service-row group block py-8" data-key="04" href="services.html">
+          <div class="flex items-baseline justify-between gap-8">
+            <div class="flex items-baseline gap-8"><span class="service-num text-[11px] tracking-[0.3em] text-ink-faint font-semibold">04</span><span class="text-[24px] md:text-[32px] font-extralight">Fragrance Bars &amp; Workshops</span></div>
+            <span class="service-arrow material-symbols-outlined text-primary text-[22px] hidden md:block">arrow_outward</span>
+          </div>
+          <p class="text-[14px] leading-relaxed text-ink-dim font-light mt-3 md:pl-[44px] max-w-xl">A living, interactive scent atelier where guests blend their own fragrance in real time.</p>
+        </a>
+        <a class="service-row group block py-8" data-key="05" href="services.html">
+          <div class="flex items-baseline justify-between gap-8">
+            <div class="flex items-baseline gap-8"><span class="service-num text-[11px] tracking-[0.3em] text-ink-faint font-semibold">05</span><span class="text-[24px] md:text-[32px] font-extralight">Signature Live Sets &amp; Experiences</span></div>
+            <span class="service-arrow material-symbols-outlined text-primary text-[22px] hidden md:block">arrow_outward</span>
+          </div>
+          <p class="text-[14px] leading-relaxed text-ink-dim font-light mt-3 md:pl-[44px] max-w-xl">Live performance and event tech that brings audiences closer to the brand.</p>
+        </a>
+        <a class="service-row group block py-8" data-key="06" href="services.html">
+          <div class="flex items-baseline justify-between gap-8">
+            <div class="flex items-baseline gap-8"><span class="service-num text-[11px] tracking-[0.3em] text-ink-faint font-semibold">06</span><span class="text-[24px] md:text-[32px] font-extralight">Curated Playlists &amp; Venue Sound</span></div>
+            <span class="service-arrow material-symbols-outlined text-primary text-[22px] hidden md:block">arrow_outward</span>
+          </div>
+          <p class="text-[14px] leading-relaxed text-ink-dim font-light mt-3 md:pl-[44px] max-w-xl">Curated playlists and venue sound design tuned to mood, moment and brand.</p>
+        </a>
+      </div>
 
-    <!-- Floating hover preview -->
-    <div id="service-preview" aria-hidden="true">
-      <img alt="" data-preview src=""/>
+      <!-- Pinned image panel (desktop) -->
+      <div class="hidden md:block md:col-span-5 reveal-up stagger-1">
+        <div class="sticky top-28 aspect-[4/5] overflow-hidden border border-white/5 bg-surface-low" id="svc-pin">
+          <img class="svc-pin-img absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-700" data-key="01" src="Sonic%20Branding.jpg" alt="Sonic branding" style="opacity:1"/>
+          <img class="svc-pin-img absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-700" data-key="02" src="Olfactory%20Branding.jpg" alt="Olfactory branding" style="opacity:0"/>
+          <img class="svc-pin-img absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-700" data-key="03" src="Environmental%20Diffusion%20Systems.jpg" alt="Environmental diffusion systems" style="opacity:0"/>
+          <img class="svc-pin-img absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-700" data-key="04" src="Fragrance%20bars%20and%20Workshops.jpg" alt="Fragrance bars and workshops" style="opacity:0"/>
+          <img class="svc-pin-img absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-700" data-key="05" src="Signature%20Live%20Sets%20and%20Experiences.jpg" alt="Signature live sets and experiences" style="opacity:0"/>
+          <img class="svc-pin-img absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-700" data-key="06" src="Curated%20playlists%20and%20Venue%20Sound%20Design.jpg" alt="Curated playlists and venue sound design" style="opacity:0"/>
+          <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(20,16,31,.45), transparent 55%);"></div>
+        </div>
+      </div>
     </div>
   </section>
+  <script>
+  (function () {
+    var rows = document.querySelectorAll('#services-list .service-row');
+    var imgs = document.querySelectorAll('#svc-pin .svc-pin-img');
+    if (!imgs.length) return;
+    rows.forEach(function (r) {
+      r.addEventListener('mouseenter', function () {
+        var k = r.getAttribute('data-key');
+        imgs.forEach(function (im) { im.style.opacity = im.getAttribute('data-key') === k ? '1' : '0'; });
+      });
+    });
+  })();
+  </script>
 
   <!-- ============ PHILOSOPHY ============ -->
   <section id="philosophy" class="py-section-gap bg-surface-lowest relative overflow-hidden border-y border-white/5">
