@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Journal — Motion · Luxury Sensory Agency</title>
+<meta name="description" content=""/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+<script src="assets/tailwind-config.js"></script>
+<link href="assets/site.css" rel="stylesheet"/>
+<style>
+  .skeleton { background: linear-gradient(90deg, rgba(255,255,255,.04) 25%, rgba(255,255,255,.08) 50%, rgba(255,255,255,.04) 75%); background-size: 200% 100%; animation: shimmer 1.6s infinite; border-radius: 2px; }
+  @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+  .prose-body h2 { font-size: clamp(26px,3vw,38px); font-weight: 200; line-height: 1.2; margin-top: 4rem; margin-bottom: 1.5rem; }
+  .prose-body h3 { font-size: clamp(20px,2.2vw,28px); font-weight: 200; line-height: 1.25; margin-top: 3rem; margin-bottom: 1.25rem; }
+  .prose-body p  { font-size: 17px; line-height: 2; color: var(--color-ink-dim, rgba(235,230,245,.65)); font-weight: 300; margin-bottom: 2rem; }
+  .prose-body blockquote { border-left: 1px solid rgba(191,194,255,.4); padding-left: 2.5rem; margin: 4rem 0; }
+  .prose-body blockquote p { font-size: clamp(20px,2.2vw,26px); font-style: italic; font-weight: 200; color: var(--color-ink, #ebe6f5); line-height: 1.65; margin-bottom: 0; }
+  .prose-body figure { margin: 3rem 0; }
+  .prose-body figure img { width: 100%; object-fit: cover; }
+  .prose-body figure figcaption { font-size: 11px; text-transform: uppercase; letter-spacing: .25em; color: rgba(235,230,245,.35); margin-top: .75rem; font-weight: 600; }
+  .prose-body a { color: var(--color-primary, #bfc2ff); text-decoration: underline; text-underline-offset: 3px; }
+  .prose-body strong { font-weight: 600; color: var(--color-ink, #ebe6f5); }
+  .prose-body p:first-child::first-letter { font-size: 64px; font-weight: 100; color: var(--color-primary, #bfc2ff); float: left; margin-right: 1rem; line-height: 0.85; }
+</style>
+</head>
+<body class="bg-background text-ink min-h-screen antialiased overflow-x-hidden">
+
+<div class="grain"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full h-[72px] z-50 border-b border-white/5" style="backdrop-filter: blur(20px); background: rgba(20,16,31,.82);">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-[1500px] mx-auto h-full">
+    <div class="flex items-center gap-10">
+      <a href="index.html" aria-label="Motion Sensory home">
+        <img alt="Motion Sensory" class="w-[140px] object-contain" src="Motion%20Sensory%20Logo.png"/>
+      </a>
+      <div class="hidden lg:flex items-center gap-7">
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="index.html">Home</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="about.html">About</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="philosophy.html">Philosophy</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="services.html">Services</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500" href="case-studies.html">Case Studies</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-primary" href="journal.html">Journal</a>
+        <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500 flex items-center gap-1" href="#"><span class="italic font-medium">LA Scenting</span> <span class="material-symbols-outlined text-[12px]">north_east</span></a>
+      </div>
+    </div>
+    <a class="btn-premium magnetic bg-ink text-background px-5 py-2 text-[10px] uppercase tracking-[0.28em] font-semibold hover:bg-primary transition-colors duration-500" href="contact.html">Contact Us</a>
+  </div>
+</nav>
+
+<main class="relative" id="post-main">
+
+  <!-- ============ LOADING STATE ============ -->
+  <div id="post-loading">
+    <div class="page-hero px-margin-mobile md:px-margin-desktop">
+      <div class="max-w-[860px] mx-auto text-center space-y-8">
+        <div class="h-4 w-24 skeleton mx-auto"></div>
+        <div class="h-12 w-full skeleton"></div>
+        <div class="h-12 w-3/4 skeleton mx-auto"></div>
+        <div class="h-4 w-48 skeleton mx-auto"></div>
+      </div>
+    </div>
+    <div class="px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto mb-28">
+      <div class="aspect-[21/9] skeleton"></div>
+    </div>
+    <div class="px-margin-mobile md:px-margin-desktop max-w-[760px] mx-auto space-y-5 pb-32">
+      <div class="h-5 w-full skeleton"></div>
+      <div class="h-5 w-5/6 skeleton"></div>
+      <div class="h-5 w-full skeleton"></div>
+      <div class="h-5 w-4/5 skeleton"></div>
+    </div>
+  </div>
+
+  <!-- ============ NOT FOUND STATE ============ -->
+  <div id="post-notfound" class="hidden page-hero px-margin-mobile md:px-margin-desktop text-center">
+    <div class="max-w-[600px] mx-auto">
+      <p class="text-[11px] uppercase tracking-[0.4em] text-primary font-semibold mb-8">Not Found</p>
+      <h1 class="text-[48px] font-extralight mb-10">This edition has <span class="italic font-thin text-ink-dim">moved on.</span></h1>
+      <a href="journal.html" class="inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] font-semibold hover:text-primary transition-colors duration-500">
+        Back to Journal <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ POST CONTENT ============ -->
+  <div id="post-content" class="hidden">
+
+    <!-- Article Hero -->
+    <header class="page-hero px-margin-mobile md:px-margin-desktop" id="post-hero">
+      <div class="max-w-[860px] mx-auto text-center">
+        <div class="hero-fade flex flex-wrap justify-center gap-3 mb-12" id="post-tags"></div>
+        <h1 id="post-title" style="font-size: clamp(38px, 4.8vw, 68px); line-height: 1.12; letter-spacing: -0.015em;"></h1>
+        <div class="hero-fade flex items-center justify-center gap-8 mt-12 text-[10px] uppercase tracking-[0.25em] text-ink-faint font-semibold" id="post-meta"></div>
+      </div>
+    </header>
+
+    <!-- Lead Image -->
+    <div class="px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto mb-28 reveal-up" id="post-cover-wrap">
+      <div class="aspect-[21/9] overflow-hidden border border-white/5 industry-tile">
+        <img id="post-cover" alt="" class="w-full h-full object-cover"/>
+      </div>
+    </div>
+
+    <!-- Article Body -->
+    <article class="px-margin-mobile md:px-margin-desktop max-w-[760px] mx-auto prose-body" id="post-body"></article>
+
+    <!-- Share -->
+    <div class="px-margin-mobile md:px-margin-desktop max-w-[760px] mx-auto">
+      <div class="flex items-center justify-between border-t border-white/10 pt-10 mb-32 reveal-up">
+        <span class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold">Share this article</span>
+        <div class="flex gap-6">
+          <button onclick="navigator.share ? navigator.share({title: document.title, url: location.href}) : null" aria-label="Share" class="text-ink-faint hover:text-primary transition-colors duration-500"><span class="material-symbols-outlined text-[20px]">share</span></button>
+          <button onclick="navigator.clipboard.writeText(location.href)" aria-label="Copy link" class="text-ink-faint hover:text-primary transition-colors duration-500"><span class="material-symbols-outlined text-[20px]">link</span></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Journal -->
+    <div class="py-section-gap bg-surface-lowest border-t border-white/5">
+      <div class="px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto text-center">
+        <a href="journal.html" class="group inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold hover:text-primary transition-colors duration-500">
+          <span class="material-symbols-outlined text-[18px] group-hover:-translate-x-2 transition-transform duration-500">arrow_back</span>
+          All Journal Editions
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="w-full py-32 bg-surface-lowest border-t border-white/5">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto">
+    <div class="md:col-span-4 space-y-10 reveal-up">
+      <img alt="Motion Sensory" class="h-8 opacity-90 object-contain object-left" src="Motion%20Sensory%20Logo.png"/>
+      <p class="text-[15px] leading-[1.8] text-ink-dim font-light max-w-xs">
+        Sensorial experiences that move the human spirit. Expertly crafted for global destinations.
+      </p>
+      <div class="flex gap-6">
+        <a aria-label="Website" class="text-ink-faint hover:text-primary transition-colors duration-500" href="#"><span class="material-symbols-outlined text-[22px]">public</span></a>
+        <a aria-label="Instagram" class="text-ink-faint hover:text-primary transition-colors duration-500" href="#"><span class="material-symbols-outlined text-[22px]">photo_camera</span></a>
+        <a aria-label="Email" class="text-ink-faint hover:text-primary transition-colors duration-500" href="#"><span class="material-symbols-outlined text-[22px]">mail</span></a>
+      </div>
+    </div>
+    <div class="md:col-span-2 space-y-8 reveal-up stagger-1">
+      <h4 class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Studio</h4>
+      <nav class="flex flex-col gap-4">
+        <a class="text-[15px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="index.html">Home</a>
+        <a class="text-[15px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="about.html">About</a>
+        <a class="text-[15px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="philosophy.html">Philosophy</a>
+        <a class="text-[15px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="services.html">Services</a>
+      </nav>
+    </div>
+    <div class="md:col-span-2 space-y-8 reveal-up stagger-2">
+      <h4 class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Archive</h4>
+      <nav class="flex flex-col gap-4">
+        <a class="text-[15px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="case-studies.html">Case Studies</a>
+        <a class="text-[15px] text-primary font-light" href="journal.html">Journal</a>
+        <a class="text-[15px] text-ink-dim hover:text-primary transition-colors duration-500 font-light" href="#">Exhibitions</a>
+      </nav>
+    </div>
+    <div class="md:col-span-4 space-y-8 reveal-up stagger-3">
+      <h4 class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Locations</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div>
+          <p class="text-[15px] text-ink font-light">Singapore</p>
+          <p class="text-[10px] text-ink-faint uppercase tracking-widest mt-1 font-semibold">HQ &amp; Lab</p>
+        </div>
+        <div>
+          <p class="text-[15px] text-ink font-light">Middle East</p>
+          <p class="text-[10px] text-ink-faint uppercase tracking-widest mt-1 font-semibold">Dubai &amp; Abu Dhabi</p>
+        </div>
+      </div>
+      <div class="pt-16 border-t border-white/5">
+        <p class="text-[11px] text-ink-faint/70 uppercase tracking-[0.2em] font-light">© 2026 Motion Pte Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  const PROJECT  = '3n3y840n';
+  const DATASET  = 'production';
+  const API_BASE = `https://${PROJECT}.apicdn.sanity.io/v2024-01-01/data/query/${DATASET}`;
+
+  // ── Get slug from URL ───────────────────────────────────────────────────────
+  const slug = new URLSearchParams(location.search).get('slug');
+  if (!slug) { showNotFound(); }
+
+  // ── Portable text → HTML ────────────────────────────────────────────────────
+  function blockToHtml(block) {
+    if (!block) return '';
+
+    if (block._type === 'image' && block.url) {
+      const caption = block.caption ? `<figcaption>${block.caption}</figcaption>` : '';
+      return `<figure><img src="${block.url}?w=1200&q=80&auto=format" alt="${block.caption || ''}"/>${caption}</figure>`;
+    }
+
+    if (block._type !== 'block') return '';
+
+    const children = (block.children || []).map(span => {
+      let t = (span.text || '')
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/\n/g, '<br/>');
+      (span.marks || []).forEach(mark => {
+        if (mark === 'strong') { t = `<strong>${t}</strong>`; return; }
+        if (mark === 'em')     { t = `<em>${t}</em>`;         return; }
+        const def = (block.markDefs || []).find(d => d._key === mark);
+        if (def && def._type === 'link') {
+          t = `<a href="${def.href}" target="_blank" rel="noopener noreferrer">${t}</a>`;
+        }
+      });
+      return t;
+    }).join('');
+
+    switch (block.style) {
+      case 'h2':         return `<h2>${children}</h2>`;
+      case 'h3':         return `<h3>${children}</h3>`;
+      case 'blockquote': return `<blockquote><p>${children}</p></blockquote>`;
+      default:           return `<p>${children}</p>`;
+    }
+  }
+
+  function portableTextToHtml(blocks) {
+    return (blocks || []).map(blockToHtml).join('\n');
+  }
+
+  // ── Date formatting ─────────────────────────────────────────────────────────
+  function formatDate(iso) {
+    if (!iso) return '';
+    return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  // ── Show states ─────────────────────────────────────────────────────────────
+  function showNotFound() {
+    document.getElementById('post-loading').classList.add('hidden');
+    document.getElementById('post-notfound').classList.remove('hidden');
+  }
+
+  function showPost(post) {
+    document.getElementById('post-loading').classList.add('hidden');
+    document.getElementById('post-content').classList.remove('hidden');
+
+    // Page title + meta
+    document.title = `${post.title} — Motion Journal`;
+    document.querySelector('meta[name="description"]').content = post.excerpt || '';
+
+    // Tags
+    const tagsEl = document.getElementById('post-tags');
+    if (post.category) {
+      tagsEl.innerHTML = `<span class="text-[11px] uppercase tracking-[0.3em] font-semibold text-primary border border-primary/25 px-4 py-2">${post.category}</span>`;
+    }
+
+    // Title
+    const titleEl = document.getElementById('post-title');
+    const words = post.title.split(' ');
+    const mid   = Math.ceil(words.length / 2);
+    titleEl.innerHTML = `
+      <span class="line-mask line-delay-1"><span class="font-extralight">${words.slice(0, mid).join(' ')}</span></span>
+      <span class="line-mask line-delay-2"><span class="italic font-thin text-ink-dim">${words.slice(mid).join(' ')}</span></span>`;
+
+    // Meta row
+    const parts = [];
+    if (post.author)      parts.push(`<span>By ${post.author}</span>`);
+    if (post.readTime)    parts.push(`<span class="w-1 h-1 rounded-full bg-primary/50"></span><span>${post.readTime} Min Read</span>`);
+    if (post.publishedAt) parts.push(`<span class="w-1 h-1 rounded-full bg-primary/50"></span><span>${formatDate(post.publishedAt)}</span>`);
+    document.getElementById('post-meta').innerHTML = parts.join('');
+
+    // Cover image
+    if (post.coverImageUrl) {
+      document.getElementById('post-cover').src = `${post.coverImageUrl}?w=2000&q=85&auto=format`;
+      document.getElementById('post-cover').alt  = post.title;
+    } else {
+      document.getElementById('post-cover-wrap').classList.add('hidden');
+    }
+
+    // Body
+    document.getElementById('post-body').innerHTML = portableTextToHtml(post.body);
+  }
+
+  // ── Fetch ───────────────────────────────────────────────────────────────────
+  async function fetchPost(slug) {
+    const query = encodeURIComponent(
+      `*[_type == "post" && slug.current == $slug][0] {
+        title, "slug": slug.current, publishedAt, excerpt,
+        category, readTime, author,
+        "coverImageUrl": coverImage.asset->url,
+        body[] {
+          ...,
+          _type == "image" => { ..., "url": asset->url }
+        }
+      }`
+    );
+    const param = encodeURIComponent(JSON.stringify(slug));
+    const res   = await fetch(`${API_BASE}?query=${query}&$slug=${param}`);
+    const data  = await res.json();
+    return data.result;
+  }
+
+  // ── Init ────────────────────────────────────────────────────────────────────
+  if (slug) {
+    fetchPost(slug)
+      .then(post => { post ? showPost(post) : showNotFound(); })
+      .catch(() => showNotFound());
+  }
+})();
+</script>
+</body>
+</html>

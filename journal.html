@@ -4,11 +4,18 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Journal — Motion · Luxury Sensory Agency</title>
+<meta name="description" content="Field notes from Motion Sensory — curated insights on sensory innovation, brand strategy, and the science of immersive experience."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
 <script src="assets/tailwind-config.js"></script>
 <link href="assets/site.css" rel="stylesheet"/>
+<style>
+  .skeleton { background: linear-gradient(90deg, rgba(255,255,255,.04) 25%, rgba(255,255,255,.08) 50%, rgba(255,255,255,.04) 75%); background-size: 200% 100%; animation: shimmer 1.6s infinite; border-radius: 2px; }
+  @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+  .filter-btn.active { color: var(--color-primary, #bfc2ff); }
+  .filter-btn { cursor: pointer; transition: color .3s; }
+</style>
 </head>
 <body class="bg-background text-ink min-h-screen antialiased overflow-x-hidden">
 
@@ -50,54 +57,49 @@
           </h1>
         </div>
         <div class="hero-fade flex flex-wrap gap-x-8 gap-y-3 md:pb-4">
-          <span class="text-[10px] uppercase tracking-[0.25em] font-semibold text-ink">All Editions</span>
-          <span class="text-[10px] uppercase tracking-[0.25em] font-semibold text-ink-faint hover:text-primary transition-colors duration-500 cursor-pointer">Sensory Science</span>
-          <span class="text-[10px] uppercase tracking-[0.25em] font-semibold text-ink-faint hover:text-primary transition-colors duration-500 cursor-pointer">Brand Strategy</span>
-          <span class="text-[10px] uppercase tracking-[0.25em] font-semibold text-ink-faint hover:text-primary transition-colors duration-500 cursor-pointer">Experience Design</span>
-          <span class="text-[10px] uppercase tracking-[0.25em] font-semibold text-ink-faint hover:text-primary transition-colors duration-500 cursor-pointer">Olfactory Arts</span>
+          <span class="filter-btn active text-[10px] uppercase tracking-[0.25em] font-semibold text-ink" data-category="all">All Editions</span>
+          <span class="filter-btn text-[10px] uppercase tracking-[0.25em] font-semibold text-ink-faint hover:text-primary" data-category="Sensory Science">Sensory Science</span>
+          <span class="filter-btn text-[10px] uppercase tracking-[0.25em] font-semibold text-ink-faint hover:text-primary" data-category="Brand Strategy">Brand Strategy</span>
+          <span class="filter-btn text-[10px] uppercase tracking-[0.25em] font-semibold text-ink-faint hover:text-primary" data-category="Experience Design">Experience Design</span>
+          <span class="filter-btn text-[10px] uppercase tracking-[0.25em] font-semibold text-ink-faint hover:text-primary" data-category="Olfactory Arts">Olfactory Arts</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ FEATURED ARTICLE ============ -->
-  <section class="px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto pb-32">
-    <a class="journal-card group grid grid-cols-1 md:grid-cols-12 gap-gutter items-center py-16 reveal-up block" href="journal-multisensory.html">
-      <div class="md:col-span-6 journal-img overflow-hidden aspect-[16/10] bg-surface-low">
-        <img alt="Multisensory alignment study" class="w-full h-full object-cover" src="Sensory%20Branding.png"/>
+  <!-- ============ POSTS ============ -->
+  <section class="px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto pb-32" id="posts-section">
+    <div id="posts-container">
+      <!-- Loading skeleton -->
+      <div id="loading-skeleton">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center py-16">
+          <div class="md:col-span-6 aspect-[16/10] skeleton"></div>
+          <div class="md:col-span-6 space-y-6 md:pl-20">
+            <div class="h-3 w-32 skeleton"></div>
+            <div class="h-8 w-full skeleton"></div>
+            <div class="h-8 w-3/4 skeleton"></div>
+            <div class="h-4 w-full skeleton"></div>
+            <div class="h-4 w-5/6 skeleton"></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center py-16 border-t border-white/5">
+          <div class="md:col-span-4 aspect-[4/3] skeleton"></div>
+          <div class="md:col-span-8 space-y-5 md:pl-16">
+            <div class="h-3 w-24 skeleton"></div>
+            <div class="h-7 w-3/4 skeleton"></div>
+            <div class="h-4 w-full skeleton"></div>
+            <div class="h-4 w-4/5 skeleton"></div>
+          </div>
+        </div>
       </div>
-      <div class="md:col-span-6 space-y-7 md:pl-20">
-        <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Insight — Commercial ROI</span>
-        <h2 class="text-[30px] md:text-[42px] font-extralight leading-[1.15] group-hover:text-primary transition-colors duration-700">The business case for multisensory alignment</h2>
-        <p class="text-[16px] leading-[1.8] text-ink-dim font-light">Multisensory alignment can drive proven results: +15–20% longer dwell time, higher satisfaction, and stronger brand recall. When every sensory cue tells the same story, the brand feels intentional.</p>
-        <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500">Explore Study <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
+      <!-- Posts render here -->
+      <div id="posts-list" class="hidden"></div>
+      <!-- Empty state -->
+      <div id="posts-empty" class="hidden py-32 text-center">
+        <p class="text-[11px] uppercase tracking-[0.4em] text-primary font-semibold mb-6">Coming Soon</p>
+        <p class="text-[20px] font-extralight text-ink-dim">The first editions are being composed.</p>
       </div>
-    </a>
-
-    <!-- Article rows -->
-    <a class="journal-card group grid grid-cols-1 md:grid-cols-12 gap-gutter items-center py-16 reveal-up block" href="journal-multisensory.html">
-      <div class="md:col-span-4 journal-img overflow-hidden aspect-[4/3] bg-surface-low">
-        <img alt="Sonic identity" class="w-full h-full object-cover" src="Sound.png"/>
-      </div>
-      <div class="md:col-span-8 space-y-6 md:pl-16">
-        <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Sonic Curation</span>
-        <h3 class="text-[26px] md:text-[34px] font-extralight leading-[1.2] group-hover:text-primary transition-colors duration-700">Sonic Identity: Composing the atmosphere with sound</h3>
-        <p class="text-[15px] leading-[1.8] text-ink-dim font-light max-w-2xl">Sound doesn't just fill a room — it sets it. It slows a heartbeat, lifts a mood, sharpens a moment. Discover how sonic landscapes echo culture and mood to define your brand's essence.</p>
-        <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500">Read Article <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
-      </div>
-    </a>
-
-    <a class="journal-card group grid grid-cols-1 md:grid-cols-12 gap-gutter items-center py-16 reveal-up block" href="journal-multisensory.html">
-      <div class="md:col-span-4 journal-img overflow-hidden aspect-[4/3] bg-surface-low">
-        <img alt="Scent and memory" class="w-full h-full object-cover" src="Scent.jpg"/>
-      </div>
-      <div class="md:col-span-8 space-y-6 md:pl-16">
-        <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Olfactory Design</span>
-        <h3 class="text-[26px] md:text-[34px] font-extralight leading-[1.2] group-hover:text-primary transition-colors duration-700">Scent: The primal memory trigger</h3>
-        <p class="text-[15px] leading-[1.8] text-ink-dim font-light max-w-2xl">The power of scenting lies in immersion — the ability to be transported across time and space, to create new, impactful connections.</p>
-        <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500">Read Article <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
-      </div>
-    </a>
+    </div>
   </section>
 
   <!-- ============ CASE HIGHLIGHT ============ -->
@@ -186,5 +188,132 @@
 </footer>
 
 <script src="assets/site.js"></script>
+<script>
+(function () {
+  const PROJECT  = '3n3y840n';
+  const DATASET  = 'production';
+  const API_BASE = `https://${PROJECT}.apicdn.sanity.io/v2024-01-01/data/query/${DATASET}`;
+
+  let allPosts = [];
+  let activeCategory = 'all';
+
+  // ── Fetch ──────────────────────────────────────────────────────────────────
+  async function fetchPosts() {
+    const query = encodeURIComponent(
+      `*[_type == "post"] | order(featured desc, publishedAt desc) {
+        _id, title, "slug": slug.current, publishedAt,
+        excerpt, category, readTime, featured,
+        "coverImageUrl": coverImage.asset->url
+      }`
+    );
+    const res = await fetch(`${API_BASE}?query=${query}`);
+    const data = await res.json();
+    return data.result || [];
+  }
+
+  // ── Date formatting ─────────────────────────────────────────────────────────
+  function formatDate(iso) {
+    if (!iso) return '';
+    return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  // ── Render featured card (first post, large) ───────────────────────────────
+  function renderFeatured(post) {
+    const readLabel = post.readTime ? `${post.readTime} Min Read` : 'Read Article';
+    return `
+      <a class="journal-card group grid grid-cols-1 md:grid-cols-12 gap-gutter items-center py-16 reveal-up block"
+         href="journal-post.html?slug=${encodeURIComponent(post.slug)}">
+        <div class="md:col-span-6 journal-img overflow-hidden aspect-[16/10] bg-surface-low">
+          ${post.coverImageUrl
+            ? `<img alt="${post.title}" class="w-full h-full object-cover" loading="lazy" src="${post.coverImageUrl}?w=1200&q=80&auto=format"/>`
+            : '<div class="w-full h-full bg-surface"></div>'}
+        </div>
+        <div class="md:col-span-6 space-y-7 md:pl-20">
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">${post.category || 'Journal'}</span>
+          <h2 class="text-[30px] md:text-[42px] font-extralight leading-[1.15] group-hover:text-primary transition-colors duration-700">${post.title}</h2>
+          ${post.excerpt ? `<p class="text-[16px] leading-[1.8] text-ink-dim font-light">${post.excerpt}</p>` : ''}
+          <div class="flex items-center gap-6 text-[10px] uppercase tracking-[0.25em] text-ink-faint font-semibold">
+            ${post.publishedAt ? `<span>${formatDate(post.publishedAt)}</span><span class="w-1 h-1 rounded-full bg-primary/50"></span>` : ''}
+            <span>${readLabel}</span>
+          </div>
+          <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500">
+            Explore Study <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span>
+          </p>
+        </div>
+      </a>`;
+  }
+
+  // ── Render regular card ────────────────────────────────────────────────────
+  function renderCard(post, borderTop) {
+    return `
+      <a class="journal-card group grid grid-cols-1 md:grid-cols-12 gap-gutter items-center py-16 reveal-up block${borderTop ? ' border-t border-white/5' : ''}"
+         href="journal-post.html?slug=${encodeURIComponent(post.slug)}">
+        <div class="md:col-span-4 journal-img overflow-hidden aspect-[4/3] bg-surface-low">
+          ${post.coverImageUrl
+            ? `<img alt="${post.title}" class="w-full h-full object-cover" loading="lazy" src="${post.coverImageUrl}?w=800&q=80&auto=format"/>`
+            : '<div class="w-full h-full bg-surface"></div>'}
+        </div>
+        <div class="md:col-span-8 space-y-6 md:pl-16">
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">${post.category || 'Journal'}</span>
+          <h3 class="text-[26px] md:text-[34px] font-extralight leading-[1.2] group-hover:text-primary transition-colors duration-700">${post.title}</h3>
+          ${post.excerpt ? `<p class="text-[15px] leading-[1.8] text-ink-dim font-light max-w-2xl">${post.excerpt}</p>` : ''}
+          <div class="flex items-center gap-6 text-[10px] uppercase tracking-[0.25em] text-ink-faint font-semibold">
+            ${post.publishedAt ? `<span>${formatDate(post.publishedAt)}</span><span class="w-1 h-1 rounded-full bg-primary/50"></span>` : ''}
+            ${post.readTime ? `<span>${post.readTime} Min Read</span>` : ''}
+          </div>
+          <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500">
+            Read Article <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span>
+          </p>
+        </div>
+      </a>`;
+  }
+
+  // ── Render all filtered posts ──────────────────────────────────────────────
+  function renderPosts(posts) {
+    const skeleton  = document.getElementById('loading-skeleton');
+    const list      = document.getElementById('posts-list');
+    const emptyMsg  = document.getElementById('posts-empty');
+
+    skeleton.classList.add('hidden');
+
+    const filtered = activeCategory === 'all'
+      ? posts
+      : posts.filter(p => p.category === activeCategory);
+
+    if (!filtered.length) {
+      list.classList.add('hidden');
+      emptyMsg.classList.remove('hidden');
+      return;
+    }
+
+    emptyMsg.classList.add('hidden');
+    list.classList.remove('hidden');
+
+    let html = renderFeatured(filtered[0]);
+    for (let i = 1; i < filtered.length; i++) {
+      html += renderCard(filtered[i], true);
+    }
+    list.innerHTML = html;
+  }
+
+  // ── Category filter ────────────────────────────────────────────────────────
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active', 'text-ink'));
+      btn.classList.add('active', 'text-ink');
+      activeCategory = btn.dataset.category;
+      if (allPosts.length) renderPosts(allPosts);
+    });
+  });
+
+  // ── Init ───────────────────────────────────────────────────────────────────
+  fetchPosts()
+    .then(posts => { allPosts = posts; renderPosts(posts); })
+    .catch(() => {
+      document.getElementById('loading-skeleton').classList.add('hidden');
+      document.getElementById('posts-empty').classList.remove('hidden');
+    });
+})();
+</script>
 </body>
 </html>
