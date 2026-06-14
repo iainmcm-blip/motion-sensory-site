@@ -1,6 +1,6 @@
 :root {
   --ease-luxe: cubic-bezier(0.16, 1, 0.3, 1);
-  --noir: #0d0e12;
+  --noir: #14101f;
   --periwinkle: #bfc2ff;
 }
 
@@ -13,15 +13,8 @@ body { font-family: 'Raleway', sans-serif; background: var(--noir); }
   font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
 }
 
-/* ---------- Film grain ---------- */
-.grain {
-  position: fixed; inset: -100%;
-  width: 300%; height: 300%;
-  pointer-events: none; z-index: 90;
-  opacity: .05;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation: grain-shift 8s steps(10) infinite;
-}
+/* ---------- Film grain (disabled — solid background per brand direction) ---------- */
+.grain { display: none; }
 @keyframes grain-shift {
   0%,100% { transform: translate(0,0); }
   10% { transform: translate(-5%,-10%); }
@@ -144,7 +137,7 @@ body.loaded .hero-fade {
 .project-card:hover .split-reveal-img { transform: scale(1.04); }
 
 .midnight-overlay {
-  background: linear-gradient(to bottom, rgba(13,14,18,.35) 0%, rgba(13,14,18,1) 100%);
+  background: linear-gradient(to bottom, rgba(20,16,31,.35) 0%, rgba(20,16,31,1) 100%);
 }
 
 .parallax-target { will-change: transform; }
@@ -175,7 +168,7 @@ body.loaded .hero-fade {
 .sense-panel:hover img { filter: grayscale(0) brightness(.75); transform: scale(1.0); }
 .sense-panel .sense-shade {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(13,14,18,.92) 0%, rgba(13,14,18,.15) 55%, rgba(13,14,18,.35) 100%);
+  background: linear-gradient(to top, rgba(20,16,31,.92) 0%, rgba(20,16,31,.15) 55%, rgba(20,16,31,.35) 100%);
 }
 .sense-panel .sense-desc {
   opacity: 0; transform: translateY(12px);

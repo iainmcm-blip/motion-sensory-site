@@ -3,10 +3,10 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        "background": "#0d0e12",
-        "surface": "#121317",
-        "surface-low": "#16171c",
-        "surface-lowest": "#0a0b0e",
+        "background": "#14101f",
+        "surface": "#1b1630",
+        "surface-low": "#211b38",
+        "surface-lowest": "#0f0b18",
         "ink": "#e8e6e1",
         "ink-dim": "#a8a6a3",
         "ink-faint": "#6b6a68",
