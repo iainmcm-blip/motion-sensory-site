@@ -172,7 +172,6 @@ body.loaded .hero-fade {
 }
 .sense-panel .sense-desc {
   opacity: 0; transform: translateY(12px);
-  height: 64px;
   transition: opacity .9s ease .25s, transform .9s var(--ease-luxe) .25s;
 }
 .sense-panel:hover .sense-desc { opacity: 1; transform: translateY(0); }
