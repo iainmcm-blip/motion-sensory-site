@@ -309,7 +309,8 @@
   // ── Init ───────────────────────────────────────────────────────────────────
   fetchPosts()
     .then(posts => { allPosts = posts; renderPosts(posts); })
-    .catch(() => {
+    .catch(err => {
+      console.error('[Journal] Fetch failed:', err);
       document.getElementById('loading-skeleton').classList.add('hidden');
       document.getElementById('posts-empty').classList.remove('hidden');
     });
