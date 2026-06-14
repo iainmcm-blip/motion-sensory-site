@@ -294,6 +294,9 @@
       html += renderCard(filtered[i], true);
     }
     list.innerHTML = html;
+    requestAnimationFrame(() => {
+      list.querySelectorAll('.reveal-up').forEach(el => el.classList.add('is-visible'));
+    });
   }
 
   // ── Category filter ────────────────────────────────────────────────────────
