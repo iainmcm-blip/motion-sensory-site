@@ -90,7 +90,12 @@
         <h2 class="text-[36px] md:text-[48px] font-extralight leading-[1.12] mb-8">Brief the <span class="italic font-thin text-ink-dim">studio.</span></h2>
         <p class="text-[16px] leading-[1.8] text-ink-dim font-light max-w-xl mb-16">Detail your technical and creative ambitions. Our architects provide an integrated experiential and operational approach to create closer affinity to your brand.</p>
 
-        <form action="contact-success.html" class="space-y-12" method="get">
+        <form action="https://api.web3forms.com/submit" class="space-y-12" method="POST">
+          <input type="hidden" name="access_key" value="6e94abae-2626-4e93-9a83-44442ce9e36b"/>
+          <input type="hidden" name="subject" value="New enquiry — Motion Sensory website"/>
+          <input type="hidden" name="from_name" value="Motion Sensory Website"/>
+          <input type="hidden" name="redirect" value="https://motion-sensory-site.vercel.app/contact-success.html"/>
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off"/>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-name">Full Name</label>
@@ -133,7 +138,7 @@
             <label class="text-[10px] uppercase tracking-[0.3em] text-ink-faint font-semibold mb-2 block" for="f-brief">Project Brief</label>
             <textarea class="field-luxe" id="f-brief" name="brief" placeholder="Tell us about your space, brand and ambitions..." rows="4"></textarea>
           </div>
-          <button class="btn-premium magnetic bg-ink text-background px-12 py-5 text-[11px] uppercase tracking-[0.25em] font-semibold hover:bg-primary transition-colors duration-500 inline-flex items-center gap-4 group" type="submit">Initialize Project <span class="material-symbols-outlined text-[16px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></button>
+          <button class="btn-premium magnetic bg-ink text-background px-12 py-5 text-[11px] uppercase tracking-[0.25em] font-semibold hover:bg-primary transition-colors duration-500 inline-flex items-center gap-4 group" type="submit">Let's Talk <span class="material-symbols-outlined text-[16px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></button>
         </form>
       </div>
 
