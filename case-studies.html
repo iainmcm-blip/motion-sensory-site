@@ -68,6 +68,7 @@
         <button class="filter-chip text-[10px] uppercase tracking-[0.25em] font-semibold px-6 py-3 border border-white/15 text-ink-dim" data-filter="retail">Retail</button>
         <button class="filter-chip text-[10px] uppercase tracking-[0.25em] font-semibold px-6 py-3 border border-white/15 text-ink-dim" data-filter="aviation">Aviation</button>
         <button class="filter-chip text-[10px] uppercase tracking-[0.25em] font-semibold px-6 py-3 border border-white/15 text-ink-dim" data-filter="finance">Finance</button>
+        <button class="filter-chip text-[10px] uppercase tracking-[0.25em] font-semibold px-6 py-3 border border-white/15 text-ink-dim" data-filter="medical">Medical</button>
       </div>
     </div>
   </section>
@@ -131,26 +132,44 @@
         <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
       </a>
 
-      <!-- Smaller cards: UOB + Airshow -->
-      <div class="case-item grid grid-cols-1 md:grid-cols-2 gap-gutter reveal-up" data-category="finance aviation">
-        <article class="group bg-surface-low border border-white/5 p-12 transition-all duration-700 hover:border-primary/30 hover:-translate-y-2 relative overflow-hidden" data-category="finance">
+      <!-- Smaller cards: UOB · Airshow · Mount Elizabeth · DBS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+        <a class="case-item group bg-surface-low border border-white/5 p-12 transition-all duration-700 hover:border-primary/30 hover:-translate-y-2 relative overflow-hidden reveal-up block" data-category="finance" href="portfolio-uob.html">
           <span class="material-symbols-outlined text-[56px] text-primary/40 group-hover:text-primary transition-colors duration-700 mb-8 block">account_balance</span>
           <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-4 block">Finance / Sustainability</span>
           <h3 class="text-[26px] font-extralight mb-3">UOB: The Art of Banking</h3>
           <h4 class="text-[15px] text-ink-dim font-semibold mb-5">Cultivating Excellence</h4>
           <p class="text-[15px] leading-[1.8] text-ink-dim font-light mb-8">Connecting UOB's principles with the artistry of bonsai through a cinematic docu-story and immersive leadership masterclasses.</p>
-          <div><p class="text-[20px] font-thin text-primary">High Intent</p><p class="text-[9px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Engagement</p></div>
+          <p class="inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500">Explore <span class="material-symbols-outlined text-[16px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
           <div class="light-bloom absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none"></div>
-        </article>
-        <article class="group bg-surface-low border border-white/5 p-12 transition-all duration-700 hover:border-primary/30 hover:-translate-y-2 relative overflow-hidden" data-category="aviation">
+        </a>
+        <a class="case-item group bg-surface-low border border-white/5 p-12 transition-all duration-700 hover:border-primary/30 hover:-translate-y-2 relative overflow-hidden reveal-up stagger-1 block" data-category="aviation" href="portfolio-airshow.html">
           <span class="material-symbols-outlined text-[56px] text-primary/40 group-hover:text-primary transition-colors duration-700 mb-8 block">flight_takeoff</span>
           <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-4 block">Aviation / Events</span>
-          <h3 class="text-[26px] font-extralight mb-3">Singapore Airshow 2026</h3>
+          <h3 class="text-[26px] font-extralight mb-3">Singapore Airshow</h3>
           <h4 class="text-[15px] text-ink-dim font-semibold mb-5">Timely: Precision Scenting</h4>
           <p class="text-[15px] leading-[1.8] text-ink-dim font-light mb-8">Scalable scent deployment for Asia's premier aviation stage, mirroring the industry's clarity and forward momentum across a vast exhibition floor.</p>
-          <div><p class="text-[20px] font-thin text-primary">High Volume</p><p class="text-[9px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Scale</p></div>
+          <p class="inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500">Explore <span class="material-symbols-outlined text-[16px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
           <div class="light-bloom absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none"></div>
-        </article>
+        </a>
+        <a class="case-item group bg-surface-low border border-white/5 p-12 transition-all duration-700 hover:border-primary/30 hover:-translate-y-2 relative overflow-hidden reveal-up block" data-category="medical" href="portfolio-mount-elizabeth.html">
+          <span class="material-symbols-outlined text-[56px] text-primary/40 group-hover:text-primary transition-colors duration-700 mb-8 block">health_and_safety</span>
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-4 block">Medical / Wellness</span>
+          <h3 class="text-[26px] font-extralight mb-3">Mount Elizabeth Novena</h3>
+          <h4 class="text-[15px] text-ink-dim font-semibold mb-5">Where Care Becomes Luxury</h4>
+          <p class="text-[15px] leading-[1.8] text-ink-dim font-light mb-8">Signature ambient scent across 13 levels — and emergency-unit scenting that signals order, control and safety where it matters most.</p>
+          <p class="inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500">Explore <span class="material-symbols-outlined text-[16px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
+          <div class="light-bloom absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none"></div>
+        </a>
+        <a class="case-item group bg-surface-low border border-white/5 p-12 transition-all duration-700 hover:border-primary/30 hover:-translate-y-2 relative overflow-hidden reveal-up stagger-1 block" data-category="finance" href="portfolio-dbs.html">
+          <span class="material-symbols-outlined text-[56px] text-primary/40 group-hover:text-primary transition-colors duration-700 mb-8 block">savings</span>
+          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-4 block">Finance / Retail</span>
+          <h3 class="text-[26px] font-extralight mb-3">DBS: Reinventing Retail</h3>
+          <h4 class="text-[15px] text-ink-dim font-semibold mb-5">The Power of Scent Gifting</h4>
+          <p class="text-[15px] leading-[1.8] text-ink-dim font-light mb-8">A signature scent as silent logo — extended beyond the branch and gifted to private clients, keeping brand affinity alive through scent memory.</p>
+          <p class="inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500">Explore <span class="material-symbols-outlined text-[16px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
+          <div class="light-bloom absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none"></div>
+        </a>
       </div>
     </div>
   </section>
@@ -229,12 +248,6 @@
         const cats = (item.getAttribute('data-category') || '').split(/\s+/);
         const show = f === 'all' || cats.includes(f);
         item.classList.toggle('filtered-out', !show);
-        // Within the combined small-card row, also filter the inner articles
-        if (show && item.tagName === 'DIV') {
-          item.querySelectorAll('article[data-category]').forEach(a => {
-            a.style.display = (f === 'all' || a.getAttribute('data-category') === f) ? '' : 'none';
-          });
-        }
       });
     });
   });
