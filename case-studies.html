@@ -176,7 +176,7 @@
       <h3 class="text-[30px] md:text-[40px] font-extralight leading-tight">${cs.heading || ''}</h3>
       ${cs.excerpt ? `<p class="text-[15px] leading-[1.8] text-ink-dim font-light">${cs.excerpt}</p>` : ''}
       ${statsHtml}
-      <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold ${arrowClass} group-hover:text-primary transition-colors duration-500 pt-2">Explore Deep Dive <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
+      <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold ${arrowClass} group-hover:text-primary transition-colors duration-500 pt-2">Learn more <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
     </div>`;
     return `<a class="case-item project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal-up block" data-category="${cs.category || ''}" href="${cs.pageFile || '#'}">
       ${imgLeft ? imageCol + textCol : textCol + imageCol}
