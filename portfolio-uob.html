@@ -35,7 +35,7 @@
 </nav>
 <main class="relative">
   <section class="relative min-h-[86vh] flex items-end overflow-hidden">
-    <img alt="" class="absolute inset-0 w-full h-full object-cover grayscale-[35%] parallax-target" data-speed="-0.04" src="uob-hero.png"/>
+    <img data-sanity-slot="hero" alt="" class="absolute inset-0 w-full h-full object-cover grayscale-[35%] parallax-target" data-speed="-0.04" src="uob-hero.png"/>
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,16,31,1) 0%, rgba(20,16,31,.55) 45%, rgba(20,16,31,.35) 100%);"></div>
     <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto w-full pb-28 pt-48">
       <div class="flex items-center gap-4 mb-10 hero-fade"><span class="text-[10px] uppercase tracking-[0.4em] text-primary font-semibold ">Our Case Studies — UOB</span></div>
@@ -50,7 +50,7 @@
   <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto ">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
       <div class="md:col-span-6 relative reveal-up">
-        <div class="aspect-[4/3] overflow-hidden border border-white/5 industry-tile md:mr-16"><img alt="UOB cathedral-like lobby" class="w-full h-full object-cover" src="uob-2.png"/></div>
+        <div class="aspect-[4/3] overflow-hidden border border-white/5 industry-tile md:mr-16"><img data-sanity-slot="body-0" alt="UOB cathedral-like lobby" class="w-full h-full object-cover" src="uob-2.png"/></div>
       </div>      <div class="md:col-span-6 space-y-9 reveal-up stagger-1">
         <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">The Approach</span>
         <h2 class="text-[36px] md:text-[50px] font-extralight leading-[1.12]">Cultivating <span class="italic font-thin text-ink-dim">excellence.</span></h2>
@@ -67,7 +67,7 @@
         <p class="text-[16px] leading-[1.85] text-ink-dim font-light">Central to the story is bonsai master Bjorn Bjorholm, whose bespoke masterclass immersed leadership and select clientele in an unparalleled journey through craft. Adapted for a series of internal and external cuts, the filmic narrative achieved broad multi-channel reach and maximum engagement among UOB&rsquo;s cherished stakeholders.</p>
         <div class="grid grid-cols-2 gap-8 pt-2 max-w-sm"><div><p class="text-[28px] font-thin text-primary">Multi-channel</p><p class="text-[10px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Internal &amp; external cuts</p></div><div><p class="text-[28px] font-thin text-primary">High intent</p><p class="text-[10px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Stakeholder engagement</p></div></div>
       </div>      <div class="md:col-span-6 relative reveal-up order-1 md:order-2">
-        <div class="aspect-[4/3] overflow-hidden border border-white/5 industry-tile md:ml-16"><img alt="Bonsai masterclass with Bjorn Bjorholm" class="w-full h-full object-cover" src="uob-3.png"/></div>
+        <div class="aspect-[4/3] overflow-hidden border border-white/5 industry-tile md:ml-16"><img data-sanity-slot="body-1" alt="Bonsai masterclass with Bjorn Bjorholm" class="w-full h-full object-cover" src="uob-3.png"/></div>
       </div>
     </div>
   </section>
@@ -139,5 +139,29 @@
   </div>
 </footer>
 <script src="assets/site.js"></script>
+<script>
+(async function() {
+  var SLUG = 'uob';
+  var API = 'https://3n3y840n.api.sanity.io/v2024-01-01/data/query/production';
+  var q = encodeURIComponent('*[_type == "caseStudy" && slug.current == "' + SLUG + '"][0]{"heroUrl": heroImage.asset->url, "pageImages": pageImages[]{"imageUrl": image.asset->url}}');
+  try {
+    var res = await fetch(API + '?query=' + q);
+    var data = await res.json();
+    var cs = data.result;
+    if (!cs) return;
+    if (cs.heroUrl) {
+      var hero = document.querySelector('[data-sanity-slot="hero"]');
+      if (hero) hero.src = cs.heroUrl + '?w=2400&q=85&auto=format';
+    }
+    if (cs.pageImages) {
+      cs.pageImages.forEach(function(img, i) {
+        if (!img || !img.imageUrl) return;
+        var el = document.querySelector('[data-sanity-slot="body-' + i + '"]');
+        if (el) el.src = img.imageUrl + '?w=1200&q=80&auto=format';
+      });
+    }
+  } catch(e) {}
+})();
+</script>
 </body>
 </html>

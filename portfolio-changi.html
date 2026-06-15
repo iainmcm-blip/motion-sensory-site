@@ -41,7 +41,7 @@
 
   <!-- ============ CASE HERO ============ -->
   <section class="relative min-h-[88vh] flex items-end overflow-hidden">
-    <img alt="Changi Airport terminal" class="absolute inset-0 w-full h-full object-cover grayscale-[40%] parallax-target" data-speed="-0.04" src="Changi%20Airport.png"/>
+    <img data-sanity-slot="hero" alt="Changi Airport terminal" class="absolute inset-0 w-full h-full object-cover grayscale-[40%] parallax-target" data-speed="-0.04" src="Changi%20Airport.png"/>
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,16,31,1) 0%, rgba(20,16,31,.55) 45%, rgba(20,16,31,.35) 100%);"></div>
     <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto w-full pb-28 pt-48">
       <div class="flex items-center gap-4 mb-10 hero-fade">
@@ -81,7 +81,7 @@
       </div>
       <div class="md:col-span-6 relative reveal-up stagger-1">
         <div class="aspect-[4/5] overflow-hidden border border-white/5 industry-tile md:ml-16">
-          <img alt="Orchid Tea scent identity" class="w-full h-full object-cover" src="Changi%20Airport%20Scent.png"/>
+          <img data-sanity-slot="body-0" alt="Orchid Tea scent identity" class="w-full h-full object-cover" src="Changi%20Airport%20Scent.png"/>
         </div>
       </div>
     </div>
@@ -127,27 +127,27 @@
     </div>
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-gutter">
       <div class="group reveal-up">
-        <div class="aspect-square overflow-hidden border border-white/5 bg-surface-low industry-tile mb-5"><img alt="Orchid Tea soy candle" class="w-full h-full object-contain p-6" src="changi-candle.png"/></div>
+        <div class="aspect-square overflow-hidden border border-white/5 bg-surface-low industry-tile mb-5"><img data-sanity-slot="body-1" alt="Orchid Tea soy candle" class="w-full h-full object-contain p-6" src="changi-candle.png"/></div>
         <p class="text-[15px] uppercase tracking-[0.2em] font-semibold text-ink-dim group-hover:text-primary transition-colors duration-500">Orchid Tea Candle</p>
       </div>
       <div class="group reveal-up stagger-1">
-        <div class="aspect-square overflow-hidden border border-white/5 bg-surface-low industry-tile mb-5"><img alt="Orchid Tea reed diffuser" class="w-full h-full object-contain p-6" src="changi-diffuser.png"/></div>
+        <div class="aspect-square overflow-hidden border border-white/5 bg-surface-low industry-tile mb-5"><img data-sanity-slot="body-2" alt="Orchid Tea reed diffuser" class="w-full h-full object-contain p-6" src="changi-diffuser.png"/></div>
         <p class="text-[15px] uppercase tracking-[0.2em] font-semibold text-ink-dim group-hover:text-primary transition-colors duration-500">Orchid Tea Reed Diffuser</p>
       </div>
       <div class="group reveal-up stagger-2">
-        <div class="aspect-square overflow-hidden border border-white/5 bg-surface-low industry-tile mb-5"><img alt="Orchid Tea fragrance oil" class="w-full h-full object-contain p-6" src="changi-oil.png"/></div>
+        <div class="aspect-square overflow-hidden border border-white/5 bg-surface-low industry-tile mb-5"><img data-sanity-slot="body-3" alt="Orchid Tea fragrance oil" class="w-full h-full object-contain p-6" src="changi-oil.png"/></div>
         <p class="text-[15px] uppercase tracking-[0.2em] font-semibold text-ink-dim group-hover:text-primary transition-colors duration-500">Orchid Tea Fragrance Oil</p>
       </div>
       <div class="group reveal-up">
-        <div class="aspect-square overflow-hidden border border-white/5 bg-surface-low industry-tile mb-5"><img alt="Orchid Tea hand sanitiser" class="w-full h-full object-contain p-6" src="changi-sanitiser.png"/></div>
+        <div class="aspect-square overflow-hidden border border-white/5 bg-surface-low industry-tile mb-5"><img data-sanity-slot="body-4" alt="Orchid Tea hand sanitiser" class="w-full h-full object-contain p-6" src="changi-sanitiser.png"/></div>
         <p class="text-[15px] uppercase tracking-[0.2em] font-semibold text-ink-dim group-hover:text-primary transition-colors duration-500">Orchid Tea Hand Sanitiser</p>
       </div>
       <div class="group reveal-up stagger-1">
-        <div class="aspect-square overflow-hidden border border-white/5 bg-surface-low industry-tile mb-5"><img alt="Mandai Wildlife x Changi reed diffuser" class="w-full h-full object-contain p-6" src="changi-mandai-diffuser.png"/></div>
+        <div class="aspect-square overflow-hidden border border-white/5 bg-surface-low industry-tile mb-5"><img data-sanity-slot="body-5" alt="Mandai Wildlife x Changi reed diffuser" class="w-full h-full object-contain p-6" src="changi-mandai-diffuser.png"/></div>
         <p class="text-[15px] uppercase tracking-[0.2em] font-semibold text-ink-dim group-hover:text-primary transition-colors duration-500">Mandai Wildlife × Changi Diffuser</p>
       </div>
       <div class="group reveal-up stagger-2">
-        <div class="aspect-square overflow-hidden border border-white/5 bg-surface-low industry-tile mb-5"><img alt="Mandai Wildlife x Changi candle" class="w-full h-full object-contain p-6" src="changi-mandai-candle.png"/></div>
+        <div class="aspect-square overflow-hidden border border-white/5 bg-surface-low industry-tile mb-5"><img data-sanity-slot="body-6" alt="Mandai Wildlife x Changi candle" class="w-full h-full object-contain p-6" src="changi-mandai-candle.png"/></div>
         <p class="text-[15px] uppercase tracking-[0.2em] font-semibold text-ink-dim group-hover:text-primary transition-colors duration-500">Mandai Wildlife × Changi Candle</p>
       </div>
     </div>
@@ -252,5 +252,29 @@
 </footer>
 
 <script src="assets/site.js"></script>
+<script>
+(async function() {
+  var SLUG = 'changi';
+  var API = 'https://3n3y840n.api.sanity.io/v2024-01-01/data/query/production';
+  var q = encodeURIComponent('*[_type == "caseStudy" && slug.current == "' + SLUG + '"][0]{"heroUrl": heroImage.asset->url, "pageImages": pageImages[]{"imageUrl": image.asset->url}}');
+  try {
+    var res = await fetch(API + '?query=' + q);
+    var data = await res.json();
+    var cs = data.result;
+    if (!cs) return;
+    if (cs.heroUrl) {
+      var hero = document.querySelector('[data-sanity-slot="hero"]');
+      if (hero) hero.src = cs.heroUrl + '?w=2400&q=85&auto=format';
+    }
+    if (cs.pageImages) {
+      cs.pageImages.forEach(function(img, i) {
+        if (!img || !img.imageUrl) return;
+        var el = document.querySelector('[data-sanity-slot="body-' + i + '"]');
+        if (el) el.src = img.imageUrl + '?w=1200&q=80&auto=format';
+      });
+    }
+  } catch(e) {}
+})();
+</script>
 </body>
 </html>

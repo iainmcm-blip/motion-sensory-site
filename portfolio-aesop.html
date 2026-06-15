@@ -41,7 +41,7 @@
 
   <!-- ============ CASE HERO ============ -->
   <section class="relative min-h-[88vh] flex items-end overflow-hidden">
-    <img alt="Aesop Khronos installation" class="absolute inset-0 w-full h-full object-cover grayscale-[30%] parallax-target" data-speed="-0.04" src="Aesop%205.png"/>
+    <img data-sanity-slot="hero" alt="Aesop Khronos installation" class="absolute inset-0 w-full h-full object-cover grayscale-[30%] parallax-target" data-speed="-0.04" src="Aesop%205.png"/>
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,16,31,1) 0%, rgba(20,16,31,.55) 45%, rgba(20,16,31,.3) 100%);"></div>
     <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto w-full pb-28 pt-48">
       <div class="flex items-center gap-4 mb-10 hero-fade">
@@ -65,7 +65,7 @@
     <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
       <div class="md:col-span-6 relative reveal-up">
         <div class="aspect-[4/5] overflow-hidden border border-white/5 industry-tile md:mr-16">
-          <img alt="Aesop Khronos — 15,000 cardboard tubes installation" class="w-full h-full object-cover" src="aesop-khronos.jpg"/>
+          <img data-sanity-slot="body-0" alt="Aesop Khronos — 15,000 cardboard tubes installation" class="w-full h-full object-cover" src="aesop-khronos.jpg"/>
         </div>
       </div>
       <div class="md:col-span-6 space-y-9 reveal-up stagger-1">
@@ -94,7 +94,7 @@
       </div>
       <div class="md:col-span-6 order-1 md:order-2 relative reveal-up">
         <div class="aspect-[4/5] overflow-hidden border border-white/5 industry-tile md:ml-16">
-          <img alt="Aesop Othertopias — Davide Quayola film triptych" class="w-full h-full object-cover" src="aesop-othertopias.png"/>
+          <img data-sanity-slot="body-1" alt="Aesop Othertopias — Davide Quayola film triptych" class="w-full h-full object-cover" src="aesop-othertopias.png"/>
         </div>
       </div>
     </div>
@@ -105,7 +105,7 @@
     <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
       <div class="md:col-span-6 relative reveal-up">
         <div class="aspect-[4/5] overflow-hidden border border-white/5 industry-tile md:mr-16">
-          <img alt="Aesop installation — Bart Hess filmic zones" class="w-full h-full object-cover" src="aesop-barthess.png"/>
+          <img data-sanity-slot="body-2" alt="Aesop installation — Bart Hess filmic zones" class="w-full h-full object-cover" src="aesop-barthess.png"/>
         </div>
       </div>
       <div class="md:col-span-6 space-y-9 reveal-up stagger-1">
@@ -209,5 +209,29 @@
 </footer>
 
 <script src="assets/site.js"></script>
+<script>
+(async function() {
+  var SLUG = 'aesop';
+  var API = 'https://3n3y840n.api.sanity.io/v2024-01-01/data/query/production';
+  var q = encodeURIComponent('*[_type == "caseStudy" && slug.current == "' + SLUG + '"][0]{"heroUrl": heroImage.asset->url, "pageImages": pageImages[]{"imageUrl": image.asset->url}}');
+  try {
+    var res = await fetch(API + '?query=' + q);
+    var data = await res.json();
+    var cs = data.result;
+    if (!cs) return;
+    if (cs.heroUrl) {
+      var hero = document.querySelector('[data-sanity-slot="hero"]');
+      if (hero) hero.src = cs.heroUrl + '?w=2400&q=85&auto=format';
+    }
+    if (cs.pageImages) {
+      cs.pageImages.forEach(function(img, i) {
+        if (!img || !img.imageUrl) return;
+        var el = document.querySelector('[data-sanity-slot="body-' + i + '"]');
+        if (el) el.src = img.imageUrl + '?w=1200&q=80&auto=format';
+      });
+    }
+  } catch(e) {}
+})();
+</script>
 </body>
 </html>
