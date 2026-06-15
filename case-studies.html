@@ -10,6 +10,8 @@
 <script src="assets/tailwind-config.js"></script>
 <link href="assets/site.css" rel="stylesheet"/>
 <style>
+  .skeleton { background: linear-gradient(90deg, rgba(255,255,255,.04) 25%, rgba(255,255,255,.08) 50%, rgba(255,255,255,.04) 75%); background-size: 200% 100%; animation: shimmer 1.6s infinite; border-radius: 2px; }
+  @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
   .filter-chip {
     transition: color .5s ease, border-color .5s ease, background-color .5s ease;
   }
@@ -75,121 +77,17 @@
 
   <!-- ============ CASES ============ -->
   <section class="pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto relative">
-    <div class="space-y-[140px]" id="case-list">
-
-      <!-- Changi (featured) -->
-      <a class="case-item project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal-up block" data-category="aviation" href="portfolio-changi.html">
-        <div class="md:col-span-7 overflow-hidden bg-surface-low aspect-[16/10] relative">
-          <img alt="Changi Airport scent identity" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="Changi%20Airport%20Scent.png"/>
-          <div class="absolute top-6 left-6"><span class="text-[11px] uppercase tracking-[0.3em] text-ink font-semibold border border-white/25 px-4 py-2 backdrop-blur-md" style="background: rgba(20,16,31,.55);">Featured</span></div>
-        </div>
-        <div class="md:col-span-5 space-y-7 md:pl-20">
-          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Aviation &amp; Atmosphere</span>
-          <h3 class="text-[30px] md:text-[40px] font-extralight leading-tight">Building the world's first airport scent identity</h3>
-          <p class="text-[15px] leading-[1.8] text-ink-dim font-light">A signature scent for Changi Airport that transforms transit into memory. Orchid Tea — a serene, modern florality designed to soothe diverse travellers and enhance emotional well-being across terminals.</p>
-          <div class="grid grid-cols-2 gap-8 pt-2">
-            <div><p class="text-[22px] font-thin text-primary">40%</p><p class="text-[11px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Stress Reduction</p></div>
-            <div><p class="text-[22px] font-thin text-primary">+20%</p><p class="text-[11px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Retail Dwell</p></div>
-          </div>
-          <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500 pt-2">Explore Deep Dive <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
-        </div>
-        <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
-      </a>
-
-      <!-- Aesop -->
-      <a class="case-item project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal-up block" data-category="retail" href="portfolio-aesop.html">
-        <div class="md:col-span-5 order-2 md:order-1 space-y-7 md:pr-20 md:text-right">
-          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Retail / Immersive Storytelling</span>
-          <h3 class="text-[30px] md:text-[40px] font-extralight leading-tight">New sensory dimensions in immersive storytelling</h3>
-          <p class="text-[15px] leading-[1.8] text-ink-dim font-light">Our long-running partnership with Aesop demonstrates how sensory-led brand worlds translate abstract philosophy into lived, memorable experiences through tactile architecture and scent.</p>
-          <div class="grid grid-cols-2 gap-8 pt-2">
-            <div><p class="text-[22px] font-thin text-primary">28%</p><p class="text-[11px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Sales Uplift</p></div>
-            <div><p class="text-[22px] font-thin text-primary">3.8M</p><p class="text-[11px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Social Reach</p></div>
-          </div>
-          <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold md:flex-row-reverse group-hover:text-primary transition-colors duration-500 pt-2">Explore Deep Dive <span class="material-symbols-outlined text-[18px] rotate-180 md:rotate-0 group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
-        </div>
-        <div class="md:col-span-7 order-1 md:order-2 overflow-hidden bg-surface-low aspect-[16/10] relative">
-          <img alt="Aesop immersive retail installation" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="aesop-othertopias.png"/>
-        </div>
-        <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
-      </a>
-
-      <!-- Hilton -->
-      <a class="case-item project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal-up block" data-category="hospitality" href="portfolio-hilton.html">
-        <div class="md:col-span-7 overflow-hidden bg-surface-low aspect-[16/10] relative">
-          <img alt="Hilton India brand showcase" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="HIlton%20India%201.png"/>
-        </div>
-        <div class="md:col-span-5 space-y-7 md:pl-20">
-          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Hospitality / Brand Legacy</span>
-          <h3 class="text-[30px] md:text-[40px] font-extralight leading-tight">A century of hospitality</h3>
-          <p class="text-[15px] leading-[1.8] text-ink-dim font-light">To elevate Hilton's brand leadership in India, we designed a multi-sensory brand showcase anchored in cinematic projection mapping and dynamic soundscapes reflecting their 1919 heritage.</p>
-          <div class="grid grid-cols-2 gap-8 pt-2">
-            <div><p class="text-[22px] font-thin text-primary">12</p><p class="text-[11px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Flagships</p></div>
-            <div><p class="text-[22px] font-thin text-primary">9+</p><p class="text-[11px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Environments</p></div>
-          </div>
-          <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500 pt-2">Explore Deep Dive <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
-        </div>
-        <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
-      </a>
-
-      <!-- UOB (full row) -->
-      <a class="case-item project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal-up block" data-category="finance" href="portfolio-uob.html">
-        <div class="md:col-span-5 order-2 md:order-1 space-y-7 md:pr-20 md:text-right">
-          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Finance / Sustainability</span>
-          <h3 class="text-[30px] md:text-[40px] font-extralight leading-tight">A cinematic brand film that redefines banking</h3>
-          <p class="text-[15px] leading-[1.8] text-ink-dim font-light">Connecting UOB's enduring principles with the artistry of bonsai — a cinematic docu-story and immersive leadership masterclass with master Bjorn Bjorholm, demonstrating leadership in sustainable banking.</p>
-          <div class="grid grid-cols-2 gap-8 pt-2">
-            <div><p class="text-[22px] font-thin text-primary">Multi-channel</p><p class="text-[11px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Internal &amp; external cuts</p></div>
-            <div><p class="text-[22px] font-thin text-primary">High Intent</p><p class="text-[11px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Stakeholder Engagement</p></div>
-          </div>
-          <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold md:flex-row-reverse group-hover:text-primary transition-colors duration-500 pt-2">Explore Deep Dive <span class="material-symbols-outlined text-[18px] rotate-180 md:rotate-0 group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
-        </div>
-        <div class="md:col-span-7 order-1 md:order-2 overflow-hidden bg-surface-low aspect-[16/10] relative">
-          <img alt="UOB bonsai courtyard brand film" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="uob-hero.png"/>
-        </div>
-        <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
-      </a>
-
-      <!-- Singapore Airshow (full row) -->
-      <a class="case-item project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal-up block" data-category="aviation" href="portfolio-airshow.html">
-        <div class="md:col-span-7 overflow-hidden bg-surface-low aspect-[16/10] relative">
-          <img alt="Singapore Airshow exhibition" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="airshow-hero.png"/>
-        </div>
-        <div class="md:col-span-5 space-y-7 md:pl-20">
-          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Aviation / Events</span>
-          <h3 class="text-[30px] md:text-[40px] font-extralight leading-tight">A signature scent at Asia's premier aviation stage</h3>
-          <p class="text-[15px] leading-[1.8] text-ink-dim font-light">For the 10th Singapore Airshow we created <em>Timely</em> — a bespoke fragrance of green leaves, aquatic and cedarwood — diffused across a vast, dome-ceilinged hall at roughly three times typical system density.</p>
-          <div class="grid grid-cols-2 gap-8 pt-2">
-            <div><p class="text-[22px] font-thin text-primary">3×</p><p class="text-[11px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Diffusion Density</p></div>
-            <div><p class="text-[22px] font-thin text-primary">High Volume</p><p class="text-[11px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">Exhibition Scale</p></div>
-          </div>
-          <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500 pt-2">Explore Deep Dive <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
-        </div>
-        <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
-      </a>
-
-      <!-- Smaller cards: Mount Elizabeth · DBS -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-        <a class="case-item group bg-surface-low border border-white/5 p-12 transition-all duration-700 hover:border-primary/30 hover:-translate-y-2 relative overflow-hidden reveal-up block" data-category="medical" href="portfolio-mount-elizabeth.html">
-          <span class="material-symbols-outlined text-[56px] text-primary/40 group-hover:text-primary transition-colors duration-700 mb-8 block">health_and_safety</span>
-          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-4 block">Medical / Wellness</span>
-          <h3 class="text-[26px] font-extralight mb-3">Mount Elizabeth Novena</h3>
-          <h4 class="text-[15px] text-ink-dim font-semibold mb-5">Where Care Becomes Luxury</h4>
-          <p class="text-[15px] leading-[1.8] text-ink-dim font-light mb-8">Signature ambient scent across 13 levels — and emergency-unit scenting that signals order, control and safety where it matters most.</p>
-          <p class="inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500">Explore <span class="material-symbols-outlined text-[16px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
-          <div class="light-bloom absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none"></div>
-        </a>
-        <a class="case-item group bg-surface-low border border-white/5 p-12 transition-all duration-700 hover:border-primary/30 hover:-translate-y-2 relative overflow-hidden reveal-up stagger-1 block" data-category="finance" href="portfolio-dbs.html">
-          <span class="material-symbols-outlined text-[56px] text-primary/40 group-hover:text-primary transition-colors duration-700 mb-8 block">savings</span>
-          <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-4 block">Finance / Retail</span>
-          <h3 class="text-[26px] font-extralight mb-3">DBS: Reinventing Retail</h3>
-          <h4 class="text-[15px] text-ink-dim font-semibold mb-5">The Power of Scent Gifting</h4>
-          <p class="text-[15px] leading-[1.8] text-ink-dim font-light mb-8">A signature scent as silent logo — extended beyond the branch and gifted to private clients, keeping brand affinity alive through scent memory.</p>
-          <p class="inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500">Explore <span class="material-symbols-outlined text-[16px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
-          <div class="light-bloom absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none"></div>
-        </a>
+    <div id="case-list-skeleton" class="space-y-[140px]">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+        <div class="md:col-span-7 aspect-[16/10] skeleton"></div>
+        <div class="md:col-span-5 space-y-6 md:pl-20"><div class="h-3 w-28 skeleton"></div><div class="h-8 w-full skeleton"></div><div class="h-4 w-full skeleton"></div><div class="h-4 w-4/5 skeleton"></div></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+        <div class="md:col-span-5 space-y-6 md:pr-20 order-2 md:order-1"><div class="h-3 w-28 skeleton"></div><div class="h-8 w-full skeleton"></div><div class="h-4 w-full skeleton"></div></div>
+        <div class="md:col-span-7 aspect-[16/10] skeleton order-1 md:order-2"></div>
       </div>
     </div>
+    <div class="space-y-[140px] hidden" id="case-list"></div>
   </section>
 
   <!-- ============ CTA ============ -->
@@ -255,20 +153,106 @@
 <script src="assets/site.js"></script>
 <script>
 (function () {
-  const chips = document.querySelectorAll('.filter-chip');
-  const items = document.querySelectorAll('.case-item');
-  chips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      chips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      const f = chip.getAttribute('data-filter');
-      items.forEach(item => {
-        const cats = (item.getAttribute('data-category') || '').split(/\s+/);
-        const show = f === 'all' || cats.includes(f);
-        item.classList.toggle('filtered-out', !show);
+  const PROJECT  = '3n3y840n';
+  const DATASET  = 'production';
+  const API_BASE = `https://${PROJECT}.api.sanity.io/v2024-01-01/data/query/${DATASET}`;
+
+  // ── Render helpers ──────────────────────────────────────────────────────────
+
+  function largeCard(cs) {
+    const imgLeft = cs.imageAlign !== 'right';
+    const imageCol = `<div class="md:col-span-7 ${imgLeft ? '' : 'order-1 md:order-2'} overflow-hidden bg-surface-low aspect-[16/10] relative">
+      ${cs.imageUrl ? `<img alt="${cs.heading || cs.client}" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" loading="lazy" src="${cs.imageUrl}?w=1400&q=80&auto=format"/>` : '<div class="w-full h-full bg-surface"></div>'}
+      ${cs.featured ? `<div class="absolute top-6 left-6"><span class="text-[11px] uppercase tracking-[0.3em] text-ink font-semibold border border-white/25 px-4 py-2 backdrop-blur-md" style="background:rgba(20,16,31,.55);">Featured</span></div>` : ''}
+    </div>`;
+    const textAlign = imgLeft ? 'md:pl-20' : 'order-2 md:order-1 md:pr-20 md:text-right';
+    const arrowClass = imgLeft ? '' : 'md:flex-row-reverse';
+    const statsHtml = (cs.stat1Value || cs.stat2Value) ? `<div class="grid grid-cols-2 gap-8 pt-2">
+      ${cs.stat1Value ? `<div><p class="text-[22px] font-thin text-primary">${cs.stat1Value}</p><p class="text-[11px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">${cs.stat1Label || ''}</p></div>` : ''}
+      ${cs.stat2Value ? `<div><p class="text-[22px] font-thin text-primary">${cs.stat2Value}</p><p class="text-[11px] uppercase tracking-[0.2em] text-ink-faint font-semibold mt-1">${cs.stat2Label || ''}</p></div>` : ''}
+    </div>` : '';
+    const textCol = `<div class="md:col-span-5 space-y-7 ${textAlign}">
+      <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">${cs.categoryLabel || ''}</span>
+      <h3 class="text-[30px] md:text-[40px] font-extralight leading-tight">${cs.heading || ''}</h3>
+      ${cs.excerpt ? `<p class="text-[15px] leading-[1.8] text-ink-dim font-light">${cs.excerpt}</p>` : ''}
+      ${statsHtml}
+      <p class="inline-flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] font-semibold ${arrowClass} group-hover:text-primary transition-colors duration-500 pt-2">Explore Deep Dive <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
+    </div>`;
+    return `<a class="case-item project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal-up block" data-category="${cs.category || ''}" href="${cs.pageFile || '#'}">
+      ${imgLeft ? imageCol + textCol : textCol + imageCol}
+      <div class="light-bloom absolute -z-10 -inset-40 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"></div>
+    </a>`;
+  }
+
+  function compactCard(cs, stagger) {
+    return `<a class="case-item group bg-surface-low border border-white/5 p-12 transition-all duration-700 hover:border-primary/30 hover:-translate-y-2 relative overflow-hidden reveal-up${stagger ? ' stagger-1' : ''} block" data-category="${cs.category || ''}" href="${cs.pageFile || '#'}">
+      ${cs.icon ? `<span class="material-symbols-outlined text-[56px] text-primary/40 group-hover:text-primary transition-colors duration-700 mb-8 block">${cs.icon}</span>` : ''}
+      <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-4 block">${cs.categoryLabel || ''}</span>
+      <h3 class="text-[26px] font-extralight mb-3">${cs.heading || ''}</h3>
+      ${cs.subtitle ? `<h4 class="text-[15px] text-ink-dim font-semibold mb-5">${cs.subtitle}</h4>` : ''}
+      ${cs.excerpt ? `<p class="text-[15px] leading-[1.8] text-ink-dim font-light mb-8">${cs.excerpt}</p>` : ''}
+      <p class="inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] font-semibold group-hover:text-primary transition-colors duration-500">Explore <span class="material-symbols-outlined text-[16px] group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></p>
+      <div class="light-bloom absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none"></div>
+    </a>`;
+  }
+
+  // ── Fetch & render ──────────────────────────────────────────────────────────
+
+  async function loadCases() {
+    const query = encodeURIComponent(
+      `*[_type == "caseStudy"] | order(order asc) {
+        _id, client, "slug": slug.current, pageFile, order,
+        cardStyle, featured, imageAlign, category, categoryLabel,
+        heading, excerpt, stat1Value, stat1Label, stat2Value, stat2Label,
+        icon, subtitle,
+        "imageUrl": listingImage.asset->url
+      }`
+    );
+    const res = await fetch(`${API_BASE}?query=${query}`);
+    const data = await res.json();
+    return data.result || [];
+  }
+
+  function renderAll(cases) {
+    const list   = document.getElementById('case-list');
+    const skel   = document.getElementById('case-list-skeleton');
+    const large  = cases.filter(c => c.cardStyle !== 'compact');
+    const compact = cases.filter(c => c.cardStyle === 'compact');
+
+    let html = large.map(c => largeCard(c)).join('');
+    if (compact.length) {
+      html += `<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">${compact.map((c, i) => compactCard(c, i > 0)).join('')}</div>`;
+    }
+    list.innerHTML = html;
+    skel.classList.add('hidden');
+    list.classList.remove('hidden');
+    list.querySelectorAll('.reveal-up').forEach(el => el.classList.add('is-visible'));
+    attachFilters();
+  }
+
+  // ── Filters ─────────────────────────────────────────────────────────────────
+
+  function attachFilters() {
+    const chips = document.querySelectorAll('.filter-chip');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const f = chip.getAttribute('data-filter');
+        document.querySelectorAll('.case-item').forEach(item => {
+          const show = f === 'all' || (item.getAttribute('data-category') || '') === f;
+          item.classList.toggle('filtered-out', !show);
+        });
       });
     });
-  });
+  }
+
+  loadCases()
+    .then(renderAll)
+    .catch(err => {
+      console.error('[Case Studies] Fetch failed:', err);
+      document.getElementById('case-list-skeleton').classList.add('hidden');
+    });
 })();
 </script>
 </body>
