@@ -57,8 +57,8 @@
       <div class="max-w-4xl">
         <p class="hero-fade text-[11px] uppercase tracking-[0.5em] text-primary font-semibold mb-10">What We Do</p>
         <h1 style="font-size: clamp(44px, 6.2vw, 96px); line-height: 1.08; letter-spacing: -0.015em;">
-          <span class="line-mask line-delay-1"><span class="font-extralight">Designing through</span></span>
-          <span class="line-mask line-delay-2"><span class="italic font-thin text-ink-dim">the senses.</span></span>
+          <span class="line-mask line-delay-1" style="padding-bottom:0.2em"><span class="font-extralight">Designing through</span></span>
+          <span class="line-mask line-delay-2" style="padding-bottom:0.2em"><span class="italic font-thin text-ink-dim">the senses.</span></span>
         </h1>
         <p class="hero-fade text-[19px] leading-[1.75] text-ink-dim font-light max-w-2xl border-t border-white/10 pt-10 mt-14">We are the architects of your brand's sensory DNA, taking a holistic strategic, experiential and operational approach to create closer affinity to your brand.</p>
       </div>
@@ -106,11 +106,11 @@
     <div class="space-y-[160px]">
 
       <!-- Pillar 01 -->
-      <article class="project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+      <article class="project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
         <div class="md:col-span-6 overflow-hidden bg-surface-low aspect-[4/3] relative reveal-up">
           <img alt="Sensory branding" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="services-sensory-branding.jpg"/>
         </div>
-        <div class="md:col-span-6 space-y-8 md:pl-20 reveal-up stagger-1">
+        <div class="md:col-span-6 space-y-8 md:pl-20 reveal-up stagger-1 md:pt-0 pt-8">
           <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Pillar 01</span>
           <h3 class="text-[32px] md:text-[44px] font-extralight leading-tight">Sensory Branding</h3>
           <ul class="space-y-4 pt-2">
@@ -129,8 +129,8 @@
       </article>
 
       <!-- Pillar 02 -->
-      <article class="project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-        <div class="md:col-span-6 order-2 md:order-1 space-y-8 md:pr-20 reveal-up stagger-1">
+      <article class="project-card group relative grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+        <div class="md:col-span-6 order-2 md:order-1 space-y-8 md:pr-20 reveal-up stagger-1 md:pt-0 pt-8">
           <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">Pillar 02</span>
           <h3 class="text-[32px] md:text-[44px] font-extralight leading-tight">Experiential Events</h3>
           <ul class="space-y-4 pt-2">
@@ -265,40 +265,100 @@
         </div>
       </div>
 
-      <!-- 6-step guest journey -->
+      <!-- 6-step guest journey — pathway -->
       <div class="mt-32">
         <p class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-14 reveal-up">How the experience unfolds</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
-          <div class="bg-background p-10 reveal-up">
-            <span class="text-[11px] tracking-[0.3em] text-primary font-semibold">01</span>
-            <h4 class="text-[20px] font-extralight mt-4 mb-3">Arrival &amp; Grounding</h4>
-            <p class="text-[15px] leading-[1.8] text-ink-dim font-light">We begin by slowing down and creating a calm environment. A short grounding moment helps guests arrive fully and shift focus inward.</p>
+        <div class="border border-white/5 overflow-hidden">
+
+          <!-- Row 1: Steps 01–03 -->
+          <div class="grid grid-cols-1 md:grid-cols-3">
+
+            <div class="p-10 pb-12 reveal-up">
+              <div class="flex items-center mb-8">
+                <div class="w-11 h-11 flex-shrink-0 rounded-full border border-primary/50 bg-background flex items-center justify-center">
+                  <span class="text-[10px] text-primary font-semibold tracking-wider">01</span>
+                </div>
+                <div class="flex-1 h-px bg-primary/20 hidden md:block ml-3"></div>
+              </div>
+              <h4 class="text-[20px] font-extralight mb-3">Arrival &amp; Grounding</h4>
+              <p class="text-[15px] leading-[1.8] text-ink-dim font-light">We begin by slowing down and creating a calm environment. A short grounding moment helps guests arrive fully and shift focus inward.</p>
+            </div>
+
+            <div class="p-10 pb-12 border-t md:border-t-0 border-white/5 reveal-up stagger-1">
+              <div class="flex items-center mb-8">
+                <div class="flex-1 h-px bg-primary/20 hidden md:block mr-3"></div>
+                <div class="w-11 h-11 flex-shrink-0 rounded-full border border-primary/50 bg-background flex items-center justify-center">
+                  <span class="text-[10px] text-primary font-semibold tracking-wider">02</span>
+                </div>
+                <div class="flex-1 h-px bg-primary/20 hidden md:block ml-3"></div>
+              </div>
+              <h4 class="text-[20px] font-extralight mb-3">The Emotional Language of Scent</h4>
+              <p class="text-[15px] leading-[1.8] text-ink-dim font-light">An introduction to how fragrance interacts with the brain, memory and emotion — why a single note can feel comforting, empowering or nostalgic.</p>
+            </div>
+
+            <div class="p-10 pb-12 border-t md:border-t-0 border-white/5 reveal-up stagger-2">
+              <div class="flex items-center mb-8">
+                <div class="flex-1 h-px bg-primary/20 hidden md:block mr-3"></div>
+                <div class="w-11 h-11 flex-shrink-0 rounded-full border border-primary/50 bg-background flex items-center justify-center">
+                  <span class="text-[10px] text-primary font-semibold tracking-wider">03</span>
+                </div>
+              </div>
+              <h4 class="text-[20px] font-extralight mb-3">Guided Scent Encounter</h4>
+              <p class="text-[15px] leading-[1.8] text-ink-dim font-light">Guests meet a curated palette of natural and rare fragrances — each created with intentional purpose, evoking emotion before notes are ever named.</p>
+            </div>
           </div>
-          <div class="bg-background p-10 reveal-up stagger-1">
-            <span class="text-[11px] tracking-[0.3em] text-primary font-semibold">02</span>
-            <h4 class="text-[20px] font-extralight mt-4 mb-3">The Emotional Language of Scent</h4>
-            <p class="text-[15px] leading-[1.8] text-ink-dim font-light">An introduction to how fragrance interacts with the brain, memory and emotion — why a single note can feel comforting, empowering or nostalgic.</p>
+
+          <!-- Row turn indicator -->
+          <div class="border-t border-white/5 hidden md:flex items-center justify-end px-10 py-5 gap-3">
+            <span class="text-[9px] uppercase tracking-[0.3em] text-ink-faint font-semibold">continues</span>
+            <span class="material-symbols-outlined text-primary/40 text-[18px]">south</span>
           </div>
-          <div class="bg-background p-10 reveal-up stagger-2">
-            <span class="text-[11px] tracking-[0.3em] text-primary font-semibold">03</span>
-            <h4 class="text-[20px] font-extralight mt-4 mb-3">Guided Scent Encounter</h4>
-            <p class="text-[15px] leading-[1.8] text-ink-dim font-light">Guests meet a curated palette of natural and rare fragrances — each created with intentional purpose, evoking emotion before notes are ever named.</p>
+
+          <!-- Row 2: Steps 04–06 -->
+          <div class="grid grid-cols-1 md:grid-cols-3 border-t border-white/5">
+
+            <div class="p-10 pb-12 reveal-up">
+              <div class="flex items-center mb-8">
+                <div class="w-11 h-11 flex-shrink-0 rounded-full border border-primary/50 bg-background flex items-center justify-center">
+                  <span class="text-[10px] text-primary font-semibold tracking-wider">04</span>
+                </div>
+                <div class="flex-1 h-px bg-primary/20 hidden md:block ml-3"></div>
+              </div>
+              <h4 class="text-[20px] font-extralight mb-3">Intention Setting</h4>
+              <p class="text-[15px] leading-[1.8] text-ink-dim font-light">Guests reflect on a simple, powerful question: what do I want this scent to support, and what have I created today?</p>
+            </div>
+
+            <div class="p-10 pb-12 border-t md:border-t-0 border-white/5 reveal-up stagger-1">
+              <div class="flex items-center mb-8">
+                <div class="flex-1 h-px bg-primary/20 hidden md:block mr-3"></div>
+                <div class="w-11 h-11 flex-shrink-0 rounded-full border border-primary/50 bg-background flex items-center justify-center">
+                  <span class="text-[10px] text-primary font-semibold tracking-wider">05</span>
+                </div>
+                <div class="flex-1 h-px bg-primary/20 hidden md:block ml-3"></div>
+              </div>
+              <h4 class="text-[20px] font-extralight mb-3">Intuitive Formulation</h4>
+              <p class="text-[15px] leading-[1.8] text-ink-dim font-light">With gentle guidance, guests blend — led by emotion rather than rules — then anchor the finished fragrance to what resonates most.</p>
+            </div>
+
+            <div class="p-10 pb-12 border-t md:border-t-0 border-white/5 reveal-up stagger-2">
+              <div class="flex items-center mb-8">
+                <div class="flex-1 h-px bg-primary/20 hidden md:block mr-3"></div>
+                <div class="w-11 h-11 flex-shrink-0 rounded-full border border-primary/50 bg-background flex items-center justify-center">
+                  <span class="text-[10px] text-primary font-semibold tracking-wider">06</span>
+                </div>
+              </div>
+              <h4 class="text-[20px] font-extralight mb-3">Closing &amp; Integration</h4>
+              <p class="text-[15px] leading-[1.8] text-ink-dim font-light">A moment of reflection lets guests notice how they feel now versus when they arrived — the blend captured in a bottle as a lasting keepsake.</p>
+            </div>
           </div>
-          <div class="bg-background p-10 reveal-up">
-            <span class="text-[11px] tracking-[0.3em] text-primary font-semibold">04</span>
-            <h4 class="text-[20px] font-extralight mt-4 mb-3">Intention Setting</h4>
-            <p class="text-[15px] leading-[1.8] text-ink-dim font-light">Guests reflect on a simple, powerful question: what do I want this scent to support, and what have I created today?</p>
+
+          <!-- Completion marker -->
+          <div class="border-t border-white/5 py-7 flex items-center justify-center gap-5">
+            <div class="w-16 h-px bg-primary/20"></div>
+            <span class="material-symbols-outlined text-primary/40 text-[22px]">spa</span>
+            <div class="w-16 h-px bg-primary/20"></div>
           </div>
-          <div class="bg-background p-10 reveal-up stagger-1">
-            <span class="text-[11px] tracking-[0.3em] text-primary font-semibold">05</span>
-            <h4 class="text-[20px] font-extralight mt-4 mb-3">Intuitive Formulation</h4>
-            <p class="text-[15px] leading-[1.8] text-ink-dim font-light">With gentle guidance, guests blend — led by emotion rather than rules — then anchor the finished fragrance to what resonates most.</p>
-          </div>
-          <div class="bg-background p-10 reveal-up stagger-2">
-            <span class="text-[11px] tracking-[0.3em] text-primary font-semibold">06</span>
-            <h4 class="text-[20px] font-extralight mt-4 mb-3">Closing &amp; Integration</h4>
-            <p class="text-[15px] leading-[1.8] text-ink-dim font-light">A moment of reflection lets guests notice how they feel now versus when they arrived — the blend captured in a bottle as a lasting keepsake.</p>
-          </div>
+
         </div>
         <p class="text-[15px] leading-[1.8] text-ink-dim font-light max-w-2xl mt-12 reveal-up">Each curated blend can be captured in a bottle and offered as a refined memento — from a single vial to a full discovery set — signifying the brand experience, and keeping it alive long after the moment has passed.</p>
       </div>
@@ -309,12 +369,12 @@
   <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1100px] mx-auto">
     <div class="text-center mb-24 reveal-up">
       <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-5 block">Our Process</span>
-      <h2 class="text-[40px] md:text-[56px] font-extralight leading-[1.12] mb-7">Concept to <span class="italic font-thin text-ink-dim">Integration</span></h2>
+      <h2 class="text-[40px] md:text-[56px] font-extralight leading-[1.2] mb-7">Concept to <span class="italic font-thin text-ink-dim">Integration</span></h2>
       <p class="text-[16px] leading-[1.8] text-ink-dim font-light max-w-xl mx-auto">At Motion Sensory, we unify creative intent, technical precision, and emotional consistency under one roof.</p>
     </div>
 
     <div class="reveal-up stagger-1">
-      <details class="process group border-t border-white/10" open>
+      <details class="process group border-t border-white/10">
         <summary class="flex items-baseline justify-between gap-8 py-10 cursor-pointer" data-cursor>
           <div class="flex items-baseline gap-10">
             <span class="text-[11px] tracking-[0.3em] text-primary font-semibold">01</span>
@@ -415,5 +475,23 @@
 </footer>
 
 <script src="assets/site.js"></script>
+<script>
+(function() {
+  var items = document.querySelectorAll('details.process');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function(d) { d.open = true; });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting && !e.target.open) {
+        e.target.open = true;
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  items.forEach(function(d) { io.observe(d); });
+})();
+</script>
 </body>
 </html>
