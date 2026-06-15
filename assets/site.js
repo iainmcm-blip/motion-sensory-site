@@ -139,8 +139,9 @@
     });
   }
 
-  /* ---------- Magnetic buttons ---------- */
-  if (!reduceMotion) {
+  /* ---------- Magnetic buttons (pointer:fine / desktop only) ---------- */
+  const isTouch = window.matchMedia('(pointer: coarse)').matches;
+  if (!reduceMotion && !isTouch) {
     document.querySelectorAll('.magnetic').forEach(el => {
       el.addEventListener('mousemove', e => {
         const r = el.getBoundingClientRect();
@@ -149,6 +150,40 @@
         el.style.transform = 'translate(' + x * 0.22 + 'px,' + y * 0.32 + 'px)';
       });
       el.addEventListener('mouseleave', () => { el.style.transform = 'translate(0,0)'; });
+    });
+  }
+
+  /* ---------- Touch tap-reveal interactions (mobile only) ---------- */
+  if (isTouch) {
+    // Industry tiles: tap to reveal colour
+    document.querySelectorAll('.industry-tile').forEach(tile => {
+      tile.addEventListener('click', () => {
+        const active = tile.classList.contains('touch-active');
+        document.querySelectorAll('.industry-tile').forEach(t => t.classList.remove('touch-active'));
+        if (!active) tile.classList.add('touch-active');
+      });
+    });
+
+    // Project cards: tap image to reveal colour
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('touch-active');
+      });
+    });
+
+    // Service flood rows: tap to preview image
+    document.querySelectorAll('.svc-flood').forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (!this.classList.contains('touch-active')) {
+          e.preventDefault();
+          document.querySelectorAll('.svc-flood').forEach(l => l.classList.remove('touch-active'));
+          this.classList.add('touch-active');
+          // Second tap navigates
+          this.addEventListener('click', function nav() {
+            this.removeEventListener('click', nav);
+          }, { once: true });
+        }
+      });
     });
   }
 

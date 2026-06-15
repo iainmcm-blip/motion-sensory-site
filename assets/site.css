@@ -284,6 +284,34 @@ body.loaded .hero-fade {
 /* ---------- Stat blocks ---------- */
 .stat-num { font-weight: 100; color: var(--periwinkle); }
 
+/* ============ MOBILE OPTIMISATIONS ============ */
+@media (max-width: 767px) {
+  /* Section spacing: 180px → 80px */
+  .py-section-gap { padding-top: 80px !important; padding-bottom: 80px !important; }
+  .pt-section-gap { padding-top: 80px !important; }
+  .pb-section-gap { padding-bottom: 80px !important; }
+
+  /* Page hero: reduce top/bottom from 220px/120px */
+  .page-hero { padding-top: 120px !important; padding-bottom: 56px !important; }
+
+  /* Marquee: tighter gaps */
+  .marquee-track { gap: 56px !important; padding-right: 56px !important; }
+
+  /* Parallax: disable translate on mobile */
+  .parallax-target { transform: none !important; }
+
+  /* Sense panels already use a separate mobile block */
+
+  /* Touch tap-reveal for industry tiles */
+  .industry-tile.touch-active img { filter: grayscale(0) brightness(.7) !important; transform: scale(1.03) !important; }
+
+  /* Touch tap-reveal for project cards */
+  .project-card.touch-active .split-reveal-img { filter: grayscale(0) !important; }
+
+  /* Touch tap-reveal for service flood rows */
+  .svc-flood.touch-active .svc-flood-img { opacity: 1 !important; }
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
