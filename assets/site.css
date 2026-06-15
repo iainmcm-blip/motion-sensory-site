@@ -243,13 +243,33 @@ body.loaded .hero-fade {
   content: '';
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 70% 55% at 50% -10%, rgba(63,61,150,.22) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 40% at 85% 10%, rgba(191,194,255,.05) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 60% at 50% -5%, rgba(63,61,150,.42) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 10%, rgba(191,194,255,.10) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 15% 20%, rgba(191,194,255,.05) 0%, transparent 55%);
   pointer-events: none;
 }
 
+/* ---------- Periwinkle accent system ---------- */
+
+/* Pull quotes — stronger periwinkle border */
+blockquote {
+  border-left: 2px solid rgba(191,194,255,.55);
+  padding-left: 1.5rem;
+}
+
+/* Closing quote sections */
+.section-quote {
+  color: rgba(191,194,255,.85);
+}
+
+/* Section dividers — periwinkle tint on key borders */
+.journal-card { border-top: 1px solid rgba(191,194,255,.10); }
+.service-row { border-top-color: rgba(191,194,255,.10); }
+.service-row:last-child { border-bottom-color: rgba(191,194,255,.10); }
+details.process { border-top-color: rgba(191,194,255,.14) !important; }
+details.process:last-of-type { border-bottom-color: rgba(191,194,255,.14) !important; }
+
 /* ---------- Journal cards ---------- */
-.journal-card { border-top: 1px solid rgba(232,230,225,.08); }
 .journal-card .journal-img { overflow: hidden; }
 .journal-card .journal-img img {
   filter: grayscale(1) brightness(.7);

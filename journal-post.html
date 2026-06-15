@@ -80,7 +80,7 @@
   <div id="post-notfound" class="hidden page-hero px-margin-mobile md:px-margin-desktop text-center">
     <div class="max-w-[600px] mx-auto">
       <p class="text-[11px] uppercase tracking-[0.4em] text-primary font-semibold mb-8">Not Found</p>
-      <h1 class="text-[48px] font-extralight mb-10">This edition has <span class="italic font-thin text-ink-dim">moved on.</span></h1>
+      <h1 class="text-[48px] font-extralight mb-10">This edition has <span class="italic font-thin text-primary/80">moved on.</span></h1>
       <a href="journal.html" class="inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] font-semibold hover:text-primary transition-colors duration-500">
         Back to Journal <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
       </a>
@@ -265,7 +265,7 @@
     const mid   = Math.ceil(words.length / 2);
     titleEl.innerHTML = `
       <span class="line-mask line-delay-1"><span class="font-extralight">${words.slice(0, mid).join(' ')}</span></span>
-      <span class="line-mask line-delay-2"><span class="italic font-thin text-ink-dim">${words.slice(mid).join(' ')}</span></span>`;
+      <span class="line-mask line-delay-2"><span class="italic font-thin text-primary/80">${words.slice(mid).join(' ')}</span></span>`;
 
     // Meta row
     const parts = [];
