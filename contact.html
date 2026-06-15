@@ -37,9 +37,34 @@
         <a class="text-[10px] uppercase tracking-[0.28em] font-semibold text-ink-dim hover:text-primary transition-colors duration-500 flex items-center gap-1" href="#"><span class="italic font-medium">LA Scenting</span> <span class="material-symbols-outlined text-[12px]">north_east</span></a>
       </div>
     </div>
-    <a class="btn-premium magnetic bg-primary text-background px-5 py-2 text-[10px] uppercase tracking-[0.28em] font-semibold transition-colors duration-500" href="contact.html">Contact Us</a>
+    <div class="flex items-center gap-4">
+      <a class="hidden lg:inline-flex btn-premium magnetic bg-primary text-background px-5 py-2 text-[10px] uppercase tracking-[0.28em] font-semibold transition-colors duration-500" href="contact.html">Contact Us</a>
+      <button id="menu-open" aria-label="Open menu" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px] focus:outline-none">
+        <span class="block h-px w-6 bg-[#e8e6e1] transition-all duration-300"></span>
+        <span class="block h-px w-6 bg-[#e8e6e1] transition-all duration-300"></span>
+        <span class="block h-px w-4 bg-[#e8e6e1] transition-all duration-300 self-start"></span>
+      </button>
+    </div>
   </div>
 </nav>
+
+<!-- Mobile navigation overlay -->
+<div id="mobile-menu" aria-hidden="true" class="fixed inset-0 z-[90] flex flex-col px-8 pt-24 pb-12" style="background:rgba(20,16,31,.97);backdrop-filter:blur(24px);">
+  <button id="menu-close" aria-label="Close menu" class="absolute top-5 right-5 w-11 h-11 flex items-center justify-center">
+    <span class="material-symbols-outlined text-[#e8e6e1]/70 text-[28px]">close</span>
+  </button>
+  <nav class="flex flex-col gap-7 mt-6">
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="index.html">Home</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="about.html">About</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="philosophy.html">Philosophy</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="services.html">Services</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="case-studies.html">Case Studies</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="journal.html">Journal</a>
+  </nav>
+  <div class="mt-auto pt-10 border-t border-white/10">
+    <a class="btn-premium bg-[#bfc2ff] text-[#14101f] px-7 py-3.5 text-[10px] uppercase tracking-[0.28em] font-semibold inline-flex" href="contact.html">Contact Us</a>
+  </div>
+</div>
 
 <main class="relative">
 
@@ -82,7 +107,7 @@
 
   <!-- ============ FORM + STUDIO INFO ============ -->
   <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">
 
       <!-- Form -->
       <div class="lg:col-span-7 reveal-up">
@@ -191,7 +216,7 @@
   <!-- ============ REGIONS ============ -->
   <section class="py-section-gap bg-surface-lowest border-t border-white/5">
     <div class="px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto">
-      <div class="mb-24 reveal-up">
+      <div class="mb-12 md:mb-24 reveal-up">
         <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-5 block">Where We Make Impact</span>
         <h2 class="text-[40px] md:text-[56px] font-extralight leading-[1.12] mb-8">Active sensory <span class="italic font-thin text-ink-dim">infrastructure.</span></h2>
         <p class="text-[16px] leading-[1.8] text-ink-dim font-light max-w-2xl">22 years of multi-sensory expertise shaping experiences across Asia Pacific and the Middle East. Our technicians are deployed across key global hubs to ensure sensory integrity.</p>
@@ -215,13 +240,13 @@
 
   <!-- ============ GULF GATEWAY ============ -->
   <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto">
-    <div class="max-w-3xl mb-24 reveal-up">
+    <div class="max-w-3xl mb-12 md:mb-24 reveal-up">
       <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-5 block">From Singapore to the Gulf</span>
       <h2 class="text-[40px] md:text-[56px] font-extralight leading-[1.12] mb-8">Scaling a proven <span class="italic font-thin text-ink-dim">sensory blueprint</span></h2>
       <p class="text-[16px] leading-[1.85] text-ink-dim font-light">Having defined the world's first airport scent identity at Changi, the opportunity now is to replicate that success across the Gulf's most ambitious destinations — from Qatar Airport and QDF travel retail to the gateways of Abu Dhabi and Dubai, scaling sensory innovation to define the next global benchmark.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-      <a class="group relative overflow-hidden aspect-[3/4] border border-white/5 industry-tile reveal-up block" href="#">
+      <a class="group relative overflow-hidden aspect-video md:aspect-[3/4] border border-white/5 industry-tile reveal-up block" href="#">
         <img alt="Qatar gateway" class="absolute inset-0 w-full h-full object-cover" src="gulf-qatar.png"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/25 to-transparent"></div>
         <div class="absolute bottom-0 left-0 p-10">
@@ -230,7 +255,7 @@
           <p class="text-[12px] text-ink-dim font-light mt-2">Qatar Airport &amp; QDF travel retail</p>
         </div>
       </a>
-      <a class="group relative overflow-hidden aspect-[3/4] border border-white/5 industry-tile reveal-up stagger-1 block" href="#">
+      <a class="group relative overflow-hidden aspect-video md:aspect-[3/4] border border-white/5 industry-tile reveal-up stagger-1 block" href="#">
         <img alt="Abu Dhabi gateway" class="absolute inset-0 w-full h-full object-cover" src="gulf-abudhabi.png"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/25 to-transparent"></div>
         <div class="absolute bottom-0 left-0 p-10">
@@ -239,7 +264,7 @@
           <p class="text-[12px] text-ink-dim font-light mt-2">Cultural &amp; aviation destinations</p>
         </div>
       </a>
-      <a class="group relative overflow-hidden aspect-[3/4] border border-white/5 industry-tile reveal-up stagger-2 block" href="#">
+      <a class="group relative overflow-hidden aspect-video md:aspect-[3/4] border border-white/5 industry-tile reveal-up stagger-2 block" href="#">
         <img alt="Dubai gateway" class="absolute inset-0 w-full h-full object-cover" src="gulf-dubai.png"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/25 to-transparent"></div>
         <div class="absolute bottom-0 left-0 p-10">
@@ -253,7 +278,7 @@
 </main>
 
 <!-- ============ FOOTER ============ -->
-<footer class="w-full py-32 bg-surface-lowest border-t border-white/5">
+<footer class="w-full py-16 md:py-32 bg-surface-lowest border-t border-white/5">
   <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1500px] mx-auto">
     <div class="md:col-span-4 space-y-10 reveal-up">
       <img alt="Motion Sensory" class="h-8 opacity-90 object-contain object-left" src="Motion%20Sensory%20Logo.png"/>

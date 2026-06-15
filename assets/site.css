@@ -284,6 +284,21 @@ body.loaded .hero-fade {
 /* ---------- Stat blocks ---------- */
 .stat-num { font-weight: 100; color: var(--periwinkle); }
 
+/* ---------- Mobile navigation menu ---------- */
+#mobile-menu {
+  transform: translateX(100%);
+  transition: transform .55s var(--ease-luxe);
+  visibility: hidden;
+}
+#mobile-menu.open {
+  transform: translateX(0);
+  visibility: visible;
+}
+#menu-open span {
+  transition: transform .35s var(--ease-luxe), opacity .3s ease, width .35s ease;
+}
+body.menu-open { overflow: hidden; }
+
 /* ============ MOBILE OPTIMISATIONS ============ */
 @media (max-width: 767px) {
   /* Section spacing: 180px → 80px */

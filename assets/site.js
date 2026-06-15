@@ -153,6 +153,26 @@
     });
   }
 
+  /* ---------- Mobile navigation menu ---------- */
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuOpenBtn = document.getElementById('menu-open');
+  const menuCloseBtn = document.getElementById('menu-close');
+  if (mobileMenu && menuOpenBtn) {
+    const openMenu = () => {
+      mobileMenu.classList.add('open');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('menu-open');
+    };
+    const closeMenu = () => {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('menu-open');
+    };
+    menuOpenBtn.addEventListener('click', openMenu);
+    if (menuCloseBtn) menuCloseBtn.addEventListener('click', closeMenu);
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+
   /* ---------- Touch tap-reveal interactions (mobile only) ---------- */
   if (isTouch) {
     // Industry tiles: tap to reveal colour
