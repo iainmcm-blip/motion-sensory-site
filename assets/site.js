@@ -1,6 +1,7 @@
 (function () {
   'use strict';
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lenis = null;
 
   /* ---------- Intro loader (home) / instant load (inner pages) ---------- */
   const loader = document.getElementById('loader');
@@ -92,6 +93,15 @@
     })(0);
   }
 
+  /* ---------- Lenis smooth scroll ---------- */
+  if (!reduceMotion && typeof Lenis !== 'undefined') {
+    lenis = new Lenis({ lerp: 0.1, smoothTouch: false });
+    (function lenisLoop(time) {
+      lenis.raf(time);
+      requestAnimationFrame(lenisLoop);
+    })(0);
+  }
+
   /* ---------- Reveal on scroll ---------- */
   const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -106,7 +116,11 @@
   /* ---------- Parallax (lerped) ---------- */
   if (!reduceMotion) {
     let target = 0, current = 0;
-    window.addEventListener('scroll', () => { target = window.pageYOffset; }, { passive: true });
+    if (lenis) {
+      lenis.on('scroll', ({ scroll }) => { target = scroll; });
+    } else {
+      window.addEventListener('scroll', () => { target = window.pageYOffset; }, { passive: true });
+    }
     (function loop() {
       current += (target - current) * 0.08;
       document.querySelectorAll('.parallax-target').forEach(el => {
@@ -118,6 +132,17 @@
       });
       requestAnimationFrame(loop);
     })();
+  }
+
+  /* ---------- Nav condense on scroll ---------- */
+  const nav = document.querySelector('nav');
+  if (nav) {
+    const setNavState = (scrollY) => nav.classList.toggle('scrolled', scrollY > 40);
+    if (lenis) {
+      lenis.on('scroll', ({ scroll }) => setNavState(scroll));
+    } else {
+      window.addEventListener('scroll', () => setNavState(window.scrollY), { passive: true });
+    }
   }
 
   /* ---------- Custom cursor ---------- */
@@ -162,11 +187,13 @@
       mobileMenu.classList.add('open');
       mobileMenu.setAttribute('aria-hidden', 'false');
       document.body.classList.add('menu-open');
+      if (lenis) lenis.stop();
     };
     const closeMenu = () => {
       mobileMenu.classList.remove('open');
       mobileMenu.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('menu-open');
+      if (lenis) lenis.start();
     };
     menuOpenBtn.addEventListener('click', openMenu);
     if (menuCloseBtn) menuCloseBtn.addEventListener('click', closeMenu);

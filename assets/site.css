@@ -5,6 +5,9 @@
 }
 
 html { scroll-behavior: smooth; }
+/* Lenis overrides: disable CSS smooth scroll when Lenis is active to prevent double-smoothing */
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
 body { font-family: 'Raleway', sans-serif; background: var(--noir); }
 
 ::selection { background: rgba(138,171,255,.25); color: #EEF0FF; }
@@ -347,6 +350,10 @@ body.menu-open { overflow: hidden; }
   /* Touch tap-reveal for service flood rows */
   .svc-flood.touch-active .svc-flood-img { opacity: 1 !important; }
 }
+
+/* ---------- Nav condense on scroll ---------- */
+nav { transition: height .5s var(--ease-luxe), background .5s ease; }
+nav.scrolled { height: 56px !important; background: rgba(7,9,28,.95) !important; }
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
