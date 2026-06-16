@@ -44,9 +44,9 @@
         vec2 mouse = u_mouse / u_resolution;
         float t = u_time * 0.12;
         vec2 flow = vec2(sin(uv.y * 3.0 + t) * 0.1, cos(uv.x * 2.0 - t) * 0.1);
-        vec3 color1 = vec3(0.008, 0.012, 0.05);
-        vec3 color2 = vec3(0.025, 0.03, 0.14);
-        vec3 color3 = vec3(0.09, 0.08, 0.38);
+        vec3 color1 = vec3(0.012, 0.018, 0.07);
+        vec3 color2 = vec3(0.05, 0.11, 0.45);
+        vec3 color3 = vec3(0.18, 0.09, 0.50);
         float mask = smoothstep(0.25, 0.75, uv.y + flow.y);
         float d = distance(uv, mouse);
         float glow = smoothstep(0.45, 0.0, d) * 0.16;
@@ -213,7 +213,7 @@
       const x = (e.clientX / window.innerWidth) * 100;
       const y = (e.clientY / window.innerHeight) * 100;
       document.querySelectorAll('.light-bloom').forEach(b => {
-        b.style.background = 'radial-gradient(circle at ' + x + '% ' + y + '%, rgba(191,194,255,.10) 0%, transparent 65%)';
+        b.style.background = 'radial-gradient(circle at ' + x + '% ' + y + '%, rgba(91,34,196,.12) 0%, transparent 65%)';
       });
     });
   }

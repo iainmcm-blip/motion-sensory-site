@@ -16,7 +16,7 @@
     transition: color .5s ease, border-color .5s ease, background-color .5s ease;
   }
   .filter-chip.active {
-    color: #0d0e12; background: #e8e6e1; border-color: #e8e6e1;
+    color: #0d0e12; background: #EEF0FF; border-color: #EEF0FF;
   }
   .case-item { transition: opacity .7s var(--ease-luxe), transform .7s var(--ease-luxe); }
   .case-item.filtered-out { opacity: 0; transform: scale(.97); pointer-events: none; position: absolute; visibility: hidden; }
@@ -29,7 +29,7 @@
 <div id="cursor-ring"></div>
 
 <!-- Top Navigation -->
-<nav class="fixed top-0 w-full h-[72px] z-50 border-b border-white/5" style="backdrop-filter: blur(20px); background: rgba(20,16,31,.82);">
+<nav class="fixed top-0 w-full h-[72px] z-50 border-b border-white/5" style="backdrop-filter: blur(20px); background: rgba(7,9,28,.82);">
   <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-[1500px] mx-auto h-full">
     <div class="flex items-center gap-10">
       <a href="index.html" aria-label="Motion Sensory home">
@@ -46,31 +46,31 @@
       </div>
     </div>
     <div class="flex items-center gap-4">
-      <a class="hidden lg:inline-flex btn-premium magnetic bg-ink text-background px-5 py-2 text-[10px] uppercase tracking-[0.28em] font-semibold hover:bg-primary transition-colors duration-500" href="contact.html">Contact Us</a>
+      <a class="hidden lg:inline-flex btn-premium magnetic bg-volt text-white px-5 py-2 text-[10px] uppercase tracking-[0.28em] font-semibold hover:bg-pulse transition-colors duration-500" href="contact.html">Contact Us</a>
       <button id="menu-open" aria-label="Open menu" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px] focus:outline-none">
-        <span class="block h-px w-6 bg-[#e8e6e1] transition-all duration-300"></span>
-        <span class="block h-px w-6 bg-[#e8e6e1] transition-all duration-300"></span>
-        <span class="block h-px w-4 bg-[#e8e6e1] transition-all duration-300 self-start"></span>
+        <span class="block h-px w-6 bg-[#EEF0FF] transition-all duration-300"></span>
+        <span class="block h-px w-6 bg-[#EEF0FF] transition-all duration-300"></span>
+        <span class="block h-px w-4 bg-[#EEF0FF] transition-all duration-300 self-start"></span>
       </button>
     </div>
   </div>
 </nav>
 
 <!-- Mobile navigation overlay -->
-<div id="mobile-menu" aria-hidden="true" class="fixed inset-0 z-[90] flex flex-col px-8 pt-24 pb-12" style="background:rgba(20,16,31,.97);backdrop-filter:blur(24px);">
+<div id="mobile-menu" aria-hidden="true" class="fixed inset-0 z-[90] flex flex-col px-8 pt-24 pb-12" style="background:rgba(7,9,28,.97);backdrop-filter:blur(24px);">
   <button id="menu-close" aria-label="Close menu" class="absolute top-5 right-5 w-11 h-11 flex items-center justify-center">
-    <span class="material-symbols-outlined text-[#e8e6e1]/70 text-[28px]">close</span>
+    <span class="material-symbols-outlined text-[#EEF0FF]/70 text-[28px]">close</span>
   </button>
   <nav class="flex flex-col gap-7 mt-6">
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="index.html">Home</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="about.html">About</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="philosophy.html">Philosophy</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="services.html">Services</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="case-studies.html">Case Studies</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="journal.html">Journal</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#EEF0FF] hover:text-[#8AABFF] transition-colors duration-500" href="index.html">Home</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#EEF0FF] hover:text-[#8AABFF] transition-colors duration-500" href="about.html">About</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#EEF0FF] hover:text-[#8AABFF] transition-colors duration-500" href="philosophy.html">Philosophy</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#EEF0FF] hover:text-[#8AABFF] transition-colors duration-500" href="services.html">Services</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#EEF0FF] hover:text-[#8AABFF] transition-colors duration-500" href="case-studies.html">Case Studies</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#EEF0FF] hover:text-[#8AABFF] transition-colors duration-500" href="journal.html">Journal</a>
   </nav>
   <div class="mt-auto pt-10 border-t border-white/10">
-    <a class="btn-premium bg-[#bfc2ff] text-[#14101f] px-7 py-3.5 text-[10px] uppercase tracking-[0.28em] font-semibold inline-flex" href="contact.html">Contact Us</a>
+    <a class="btn-premium bg-volt text-white px-7 py-3.5 text-[10px] uppercase tracking-[0.28em] font-semibold inline-flex" href="contact.html">Contact Us</a>
   </div>
 </div>
 
@@ -187,7 +187,7 @@
     const imgLeft = cs.imageAlign !== 'right';
     const imageCol = `<div class="md:col-span-7 ${imgLeft ? '' : 'order-1 md:order-2'} overflow-hidden bg-surface-low aspect-[16/10] relative">
       ${cs.imageUrl ? `<img alt="${cs.heading || cs.client}" class="split-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" loading="lazy" src="${cs.imageUrl}?w=1400&q=80&auto=format"/>` : '<div class="w-full h-full bg-surface"></div>'}
-      ${cs.featured ? `<div class="absolute top-6 left-6"><span class="text-[11px] uppercase tracking-[0.3em] text-ink font-semibold border border-white/25 px-4 py-2 backdrop-blur-md" style="background:rgba(20,16,31,.55);">Featured</span></div>` : ''}
+      ${cs.featured ? `<div class="absolute top-6 left-6"><span class="text-[11px] uppercase tracking-[0.3em] text-ink font-semibold border border-white/25 px-4 py-2 backdrop-blur-md" style="background:rgba(7,9,28,.55);">Featured</span></div>` : ''}
     </div>`;
     const textAlign = imgLeft ? 'md:pl-20' : 'order-2 md:order-1 md:pr-20 md:text-right';
     const arrowClass = imgLeft ? '' : 'md:flex-row-reverse';
