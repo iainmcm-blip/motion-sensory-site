@@ -167,7 +167,7 @@
 <script>
 (async function() {
   var SLUG = 'airshow';
-  var API = 'https://3n3y840n.api.sanity.io/v2024-01-01/data/query/production';
+  var API = 'https://vlohz8nm.api.sanity.io/v2024-01-01/data/query/production';
   var q = encodeURIComponent('*[_type == "caseStudy" && slug.current == "' + SLUG + '"][0]{"heroUrl": heroImage.asset->url, "pageImages": pageImages[]{"imageUrl": image.asset->url}}');
   try {
     var res = await fetch(API + '?query=' + q);
