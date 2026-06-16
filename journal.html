@@ -245,14 +245,14 @@
   // Local fallback covers — used ONLY when a post has no coverImage in Sanity.
   // Once a real cover is uploaded in Sanity Studio it overrides these automatically.
   const FALLBACK_COVERS = {
-    'multisensory-alignment': 'Sensory%20Branding.png',
+    'multisensory-alignment': 'services-sensory-branding.jpg',
     'olfactory-branding-signature-scent': 'Olfactory%20Branding.jpg',
     'sonic-design-shapes-space': 'Sonic%20Branding.jpg',
     'strategy-of-stillness': 'hilton-hotel-lobby.jpg'
   };
   function coverSrc(post, w) {
     if (post.coverImageUrl) return `${post.coverImageUrl}?w=${w}&q=80&auto=format`;
-    return FALLBACK_COVERS[post.slug] || 'Sensory%20Branding.png';
+    return FALLBACK_COVERS[post.slug] || 'services-sensory-branding.jpg';
   }
 
   function renderFeatured(post) {
