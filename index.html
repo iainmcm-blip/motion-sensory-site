@@ -17,12 +17,12 @@ tailwind.config = {
       colors: {
         "background": "#07091C",      /* Abyss — hero/full-bleed ground */
         "surface": "#0D1535",         /* Midnight — elevated surfaces */
-        "surface-low": "#16204A",     /* Midnight, lifted (cards/placeholders) */
-        "surface-lowest": "#05060F",  /* deep Abyss — alternating sections */
+        "surface-low": "#1A2458",     /* Dusk — elevated card surfaces */
+        "surface-lowest": "#03040D",  /* Void — recessed/banded sections */
         "ink": "#EEF0FF",             /* Nimbus — primary text (never pure white) */
         "ink-dim": "#7A88B4",         /* Slate — secondary text */
         "ink-faint": "#4D567C",       /* deep Slate — captions */
-        "primary": "#2B5CF0",         /* Pulse — accent text / UI highlights */
+        "primary": "#8AABFF",         /* Haze — accent text / UI accents (brightened for legibility) */
         "outline": "#3A4675",
         /* named brand tokens */
         "abyss": "#07091C",
@@ -31,6 +31,10 @@ tailwind.config = {
         "pulse": "#2B5CF0",           /* interactive blue — hover, glows */
         "amethyst": "#5B22C4",        /* primary purple — gradient anchor */
         "iris": "#8055D8",            /* secondary violet — soft emphasis */
+        "sky": "#C5D3FF",            /* lightest blue tint — data labels */
+        "haze": "#8AABFF",           /* light blue — UI accents, hover tints */
+        "dusk": "#1A2458",           /* lightest foundation — card surfaces */
+        "void": "#03040D",           /* darkest foundation — shadow overlays */
         "nimbus": "#EEF0FF",
         "slate": "#7A88B4",
         "grain": "#D4BC8A"            /* rare brass/gold material cue (max ~5%) */
@@ -49,7 +53,7 @@ tailwind.config = {
 <link href="assets/site.css" rel="stylesheet"/>
 <style>
   /* ===== Motion Sensory new palette — Home-scoped overrides of site.css literals ===== */
-  :root { --noir: #07091C; --periwinkle: #2B5CF0; }            /* Abyss ground, Pulse accent */
+  :root { --noir: #07091C; --periwinkle: #8AABFF; }            /* Abyss ground, Haze accent */
   ::selection { background: rgba(43,92,240,.28); color: #EEF0FF; }
   /* ambient glow/bloom → amethyst; !important beats the JS-set inline background */
   .light-bloom { background: radial-gradient(circle at center, rgba(91,34,196,.16) 0%, transparent 70%) !important; }
@@ -111,12 +115,12 @@ tailwind.config = {
     <span class="material-symbols-outlined text-[#e8e6e1]/70 text-[28px]">close</span>
   </button>
   <nav class="flex flex-col gap-7 mt-6">
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#2B5CF0] transition-colors duration-500" href="index.html">Home</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#2B5CF0] transition-colors duration-500" href="about.html">About</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#2B5CF0] transition-colors duration-500" href="philosophy.html">Philosophy</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#2B5CF0] transition-colors duration-500" href="services.html">Services</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#2B5CF0] transition-colors duration-500" href="case-studies.html">Case Studies</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#2B5CF0] transition-colors duration-500" href="journal.html">Journal</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-primary transition-colors duration-500" href="index.html">Home</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-primary transition-colors duration-500" href="about.html">About</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-primary transition-colors duration-500" href="philosophy.html">Philosophy</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-primary transition-colors duration-500" href="services.html">Services</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-primary transition-colors duration-500" href="case-studies.html">Case Studies</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-primary transition-colors duration-500" href="journal.html">Journal</a>
   </nav>
   <div class="mt-auto pt-10 border-t border-white/10">
     <a class="btn-premium bg-volt text-white px-7 py-3.5 text-[10px] uppercase tracking-[0.28em] font-semibold inline-flex" href="contact.html">Contact Us</a>
