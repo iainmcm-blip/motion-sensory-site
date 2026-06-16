@@ -103,6 +103,7 @@ body { font-family: 'Raleway', sans-serif; background: var(--noir); }
 .stagger-2 { transition-delay: .24s; }
 .stagger-3 { transition-delay: .36s; }
 .stagger-4 { transition-delay: .48s; }
+.stagger-5 { transition-delay: .60s; }
 
 /* Masked line reveal for page heroes */
 .line-mask { overflow: hidden; display: block; }
