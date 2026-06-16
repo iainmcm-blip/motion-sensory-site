@@ -7,8 +7,59 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
-<script src="assets/tailwind-config.js"></script>
+<script>
+/* Motion Sensory — new brand palette (Home proof; scoped to this page).
+   On sign-off this moves into assets/tailwind-config.js for the site-wide sweep. */
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "background": "#07091C",      /* Abyss — hero/full-bleed ground */
+        "surface": "#0D1535",         /* Midnight — elevated surfaces */
+        "surface-low": "#16204A",     /* Midnight, lifted (cards/placeholders) */
+        "surface-lowest": "#05060F",  /* deep Abyss — alternating sections */
+        "ink": "#EEF0FF",             /* Nimbus — primary text (never pure white) */
+        "ink-dim": "#7A88B4",         /* Slate — secondary text */
+        "ink-faint": "#4D567C",       /* deep Slate — captions */
+        "primary": "#2B5CF0",         /* Pulse — accent text / UI highlights */
+        "outline": "#3A4675",
+        /* named brand tokens */
+        "abyss": "#07091C",
+        "midnight": "#0D1535",
+        "volt": "#1232D6",            /* brand hero blue — CTAs, brand moments */
+        "pulse": "#2B5CF0",           /* interactive blue — hover, glows */
+        "amethyst": "#5B22C4",        /* primary purple — gradient anchor */
+        "iris": "#8055D8",            /* secondary violet — soft emphasis */
+        "nimbus": "#EEF0FF",
+        "slate": "#7A88B4",
+        "grain": "#D4BC8A"            /* rare brass/gold material cue (max ~5%) */
+      },
+      spacing: {
+        "section-gap": "180px",
+        "gutter": "32px",
+        "margin-desktop": "80px",
+        "margin-mobile": "24px"
+      },
+      fontFamily: { "sans": ["Raleway", "sans-serif"] }
+    }
+  }
+}
+</script>
 <link href="assets/site.css" rel="stylesheet"/>
+<style>
+  /* ===== Motion Sensory new palette — Home-scoped overrides of site.css literals ===== */
+  :root { --noir: #07091C; --periwinkle: #2B5CF0; }            /* Abyss ground, Pulse accent */
+  ::selection { background: rgba(43,92,240,.28); color: #EEF0FF; }
+  /* ambient glow/bloom → amethyst; !important beats the JS-set inline background */
+  .light-bloom { background: radial-gradient(circle at center, rgba(91,34,196,.16) 0%, transparent 70%) !important; }
+  .btn-premium:hover { box-shadow: 0 0 34px rgba(18,50,214,.45); }  /* Volt glow */
+  body.cursor-hover #cursor-ring { border-color: rgba(43,92,240,.7); background: rgba(43,92,240,.08); }
+  .service-row:hover { background: rgba(43,92,240,.04); }
+  /* dark image overlays: noir → Abyss */
+  .midnight-overlay { background: linear-gradient(to bottom, rgba(7,9,28,.35) 0%, rgba(7,9,28,1) 100%); }
+  .sense-panel .sense-shade { background: linear-gradient(to top, rgba(7,9,28,.92) 0%, rgba(7,9,28,.15) 55%, rgba(7,9,28,.35) 100%); }
+</style>
 </head>
 <body class="bg-background text-ink min-h-screen antialiased overflow-x-hidden">
 
@@ -27,7 +78,7 @@
 </div>
 
 <!-- Top Navigation -->
-<nav class="fixed top-0 w-full h-[72px] z-50 border-b border-white/5" style="backdrop-filter: blur(20px); background: rgba(20,16,31,.82);">
+<nav class="fixed top-0 w-full h-[72px] z-50 border-b border-white/5" style="backdrop-filter: blur(20px); background: rgba(7,9,28,.82);">
   <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-[1500px] mx-auto h-full">
     <div class="flex items-center gap-10">
       <a href="#top" aria-label="Motion Sensory home">
@@ -44,7 +95,7 @@
       </div>
     </div>
     <div class="flex items-center gap-4">
-      <a class="hidden lg:inline-flex btn-premium magnetic bg-ink text-background px-5 py-2 text-[10px] uppercase tracking-[0.28em] font-semibold hover:bg-primary transition-colors duration-500" href="contact.html">Contact Us</a>
+      <a class="hidden lg:inline-flex btn-premium magnetic bg-volt text-white px-5 py-2 text-[10px] uppercase tracking-[0.28em] font-semibold hover:bg-pulse transition-colors duration-500" href="contact.html">Contact Us</a>
       <button id="menu-open" aria-label="Open menu" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px] focus:outline-none">
         <span class="block h-px w-6 bg-[#e8e6e1] transition-all duration-300"></span>
         <span class="block h-px w-6 bg-[#e8e6e1] transition-all duration-300"></span>
@@ -55,20 +106,20 @@
 </nav>
 
 <!-- Mobile navigation overlay -->
-<div id="mobile-menu" aria-hidden="true" class="fixed inset-0 z-[90] flex flex-col px-8 pt-24 pb-12" style="background:rgba(20,16,31,.97);backdrop-filter:blur(24px);">
+<div id="mobile-menu" aria-hidden="true" class="fixed inset-0 z-[90] flex flex-col px-8 pt-24 pb-12" style="background:rgba(7,9,28,.97);backdrop-filter:blur(24px);">
   <button id="menu-close" aria-label="Close menu" class="absolute top-5 right-5 w-11 h-11 flex items-center justify-center">
     <span class="material-symbols-outlined text-[#e8e6e1]/70 text-[28px]">close</span>
   </button>
   <nav class="flex flex-col gap-7 mt-6">
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="index.html">Home</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="about.html">About</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="philosophy.html">Philosophy</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="services.html">Services</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="case-studies.html">Case Studies</a>
-    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#bfc2ff] transition-colors duration-500" href="journal.html">Journal</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#2B5CF0] transition-colors duration-500" href="index.html">Home</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#2B5CF0] transition-colors duration-500" href="about.html">About</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#2B5CF0] transition-colors duration-500" href="philosophy.html">Philosophy</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#2B5CF0] transition-colors duration-500" href="services.html">Services</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#2B5CF0] transition-colors duration-500" href="case-studies.html">Case Studies</a>
+    <a class="text-[28px] font-light tracking-[0.03em] text-[#e8e6e1] hover:text-[#2B5CF0] transition-colors duration-500" href="journal.html">Journal</a>
   </nav>
   <div class="mt-auto pt-10 border-t border-white/10">
-    <a class="btn-premium bg-[#bfc2ff] text-[#14101f] px-7 py-3.5 text-[10px] uppercase tracking-[0.28em] font-semibold inline-flex" href="contact.html">Contact Us</a>
+    <a class="btn-premium bg-volt text-white px-7 py-3.5 text-[10px] uppercase tracking-[0.28em] font-semibold inline-flex" href="contact.html">Contact Us</a>
   </div>
 </div>
 
@@ -79,7 +130,7 @@
     <div id="hero-canvas-container">
       <canvas id="hero-canvas"></canvas>
     </div>
-    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 110%, rgba(20,16,31,0) 0%, rgba(20,16,31,.55) 70%);"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 110%, rgba(7,9,28,0) 0%, rgba(7,9,28,.55) 70%);"></div>
 
     <div class="relative z-10 max-w-6xl space-y-14">
       <p class="hero-fade text-[11px] uppercase tracking-[0.6em] text-primary font-semibold">Sensory&nbsp;&nbsp;Architecture</p>
@@ -282,7 +333,7 @@
       <a class="svc-flood group relative block overflow-hidden border-t border-white/10" href="services.html">
         <div class="svc-flood-img absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-[900ms]">
           <img class="w-full h-full object-cover" src="Sonic%20Branding.jpg" alt="Sonic branding"/>
-          <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(20,16,31,.96) 0%, rgba(20,16,31,.78) 42%, rgba(20,16,31,.42) 100%);"></div>
+          <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(7,9,28,.96) 0%, rgba(7,9,28,.78) 42%, rgba(7,9,28,.42) 100%);"></div>
         </div>
         <div class="svc-flood-body relative z-10 flex items-center justify-between gap-8 px-4 md:px-8 py-9 md:py-11">
           <div class="flex items-start gap-6 md:gap-10">
@@ -298,7 +349,7 @@
       <a class="svc-flood group relative block overflow-hidden border-t border-white/10" href="services.html">
         <div class="svc-flood-img absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-[900ms]">
           <img class="w-full h-full object-cover" src="Olfactory%20Branding.jpg" alt="Olfactory branding"/>
-          <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(20,16,31,.96) 0%, rgba(20,16,31,.78) 42%, rgba(20,16,31,.42) 100%);"></div>
+          <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(7,9,28,.96) 0%, rgba(7,9,28,.78) 42%, rgba(7,9,28,.42) 100%);"></div>
         </div>
         <div class="svc-flood-body relative z-10 flex items-center justify-between gap-8 px-4 md:px-8 py-9 md:py-11">
           <div class="flex items-start gap-6 md:gap-10">
@@ -314,7 +365,7 @@
       <a class="svc-flood group relative block overflow-hidden border-t border-white/10" href="services.html">
         <div class="svc-flood-img absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-[900ms]">
           <img class="w-full h-full object-cover" src="Environmental%20Diffusion%20Systems.jpg" alt="Environmental diffusion systems"/>
-          <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(20,16,31,.96) 0%, rgba(20,16,31,.78) 42%, rgba(20,16,31,.42) 100%);"></div>
+          <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(7,9,28,.96) 0%, rgba(7,9,28,.78) 42%, rgba(7,9,28,.42) 100%);"></div>
         </div>
         <div class="svc-flood-body relative z-10 flex items-center justify-between gap-8 px-4 md:px-8 py-9 md:py-11">
           <div class="flex items-start gap-6 md:gap-10">
@@ -330,7 +381,7 @@
       <a class="svc-flood group relative block overflow-hidden border-t border-white/10" href="services.html">
         <div class="svc-flood-img absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-[900ms]">
           <img class="w-full h-full object-cover" src="Fragrance%20bars%20and%20Workshops.jpg" alt="Fragrance bars and workshops"/>
-          <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(20,16,31,.96) 0%, rgba(20,16,31,.78) 42%, rgba(20,16,31,.42) 100%);"></div>
+          <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(7,9,28,.96) 0%, rgba(7,9,28,.78) 42%, rgba(7,9,28,.42) 100%);"></div>
         </div>
         <div class="svc-flood-body relative z-10 flex items-center justify-between gap-8 px-4 md:px-8 py-9 md:py-11">
           <div class="flex items-start gap-6 md:gap-10">
@@ -346,7 +397,7 @@
       <a class="svc-flood group relative block overflow-hidden border-t border-white/10" href="services.html">
         <div class="svc-flood-img absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-[900ms]">
           <img class="w-full h-full object-cover" src="Signature%20Live%20Sets%20and%20Experiences.jpg" alt="Signature live sets and experiences"/>
-          <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(20,16,31,.96) 0%, rgba(20,16,31,.78) 42%, rgba(20,16,31,.42) 100%);"></div>
+          <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(7,9,28,.96) 0%, rgba(7,9,28,.78) 42%, rgba(7,9,28,.42) 100%);"></div>
         </div>
         <div class="svc-flood-body relative z-10 flex items-center justify-between gap-8 px-4 md:px-8 py-9 md:py-11">
           <div class="flex items-start gap-6 md:gap-10">
@@ -362,7 +413,7 @@
       <a class="svc-flood group relative block overflow-hidden border-t border-white/10" href="services.html">
         <div class="svc-flood-img absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-[900ms]">
           <img class="w-full h-full object-cover" src="Curated%20playlists%20and%20Venue%20Sound%20Design.jpg" alt="Curated playlists and venue sound design"/>
-          <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(20,16,31,.96) 0%, rgba(20,16,31,.78) 42%, rgba(20,16,31,.42) 100%);"></div>
+          <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(7,9,28,.96) 0%, rgba(7,9,28,.78) 42%, rgba(7,9,28,.42) 100%);"></div>
         </div>
         <div class="svc-flood-body relative z-10 flex items-center justify-between gap-8 px-4 md:px-8 py-9 md:py-11">
           <div class="flex items-start gap-6 md:gap-10">
@@ -442,9 +493,9 @@
           <span class="text-[15px] tracking-[0.15em] text-ink-dim font-light">Jakarta</span>
           <span class="text-[15px] tracking-[0.15em] text-ink-dim font-light">Bali</span>
           <span class="text-[15px] tracking-[0.15em] text-ink-dim font-light">Sydney</span>
-          <span class="text-[15px] tracking-[0.15em] text-primary font-light">Dubai</span>
-          <span class="text-[15px] tracking-[0.15em] text-primary font-light">Abu Dhabi</span>
-          <span class="text-[15px] tracking-[0.15em] text-primary font-light">Doha</span>
+          <span class="text-[15px] tracking-[0.15em] text-grain font-light">Dubai</span>
+          <span class="text-[15px] tracking-[0.15em] text-grain font-light">Abu Dhabi</span>
+          <span class="text-[15px] tracking-[0.15em] text-grain font-light">Doha</span>
         </div>
       </div>
     </div>
