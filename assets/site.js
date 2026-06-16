@@ -46,7 +46,7 @@
         vec2 flow = vec2(sin(uv.y * 3.0 + t) * 0.1, cos(uv.x * 2.0 - t) * 0.1);
         vec3 color1 = vec3(0.012, 0.018, 0.07);
         vec3 color2 = vec3(0.05, 0.11, 0.45);
-        vec3 color3 = vec3(0.18, 0.09, 0.50);
+        vec3 color3 = vec3(0.08, 0.11, 0.44);
         float mask = smoothstep(0.25, 0.75, uv.y + flow.y);
         float d = distance(uv, mouse);
         float glow = smoothstep(0.45, 0.0, d) * 0.16;
