@@ -242,15 +242,26 @@
   }
 
   // ── Render featured card (first post, large) ───────────────────────────────
+  // Local fallback covers — used ONLY when a post has no coverImage in Sanity.
+  // Once a real cover is uploaded in Sanity Studio it overrides these automatically.
+  const FALLBACK_COVERS = {
+    'multisensory-alignment': 'Sensory%20Branding.png',
+    'olfactory-branding-signature-scent': 'Olfactory%20Branding.jpg',
+    'sonic-design-shapes-space': 'Sonic%20Branding.jpg',
+    'strategy-of-stillness': 'hilton-hotel-lobby.jpg'
+  };
+  function coverSrc(post, w) {
+    if (post.coverImageUrl) return `${post.coverImageUrl}?w=${w}&q=80&auto=format`;
+    return FALLBACK_COVERS[post.slug] || 'Sensory%20Branding.png';
+  }
+
   function renderFeatured(post) {
     const readLabel = post.readTime ? `${post.readTime} Min Read` : 'Read Article';
     return `
       <a class="journal-card group grid grid-cols-1 md:grid-cols-12 gap-gutter items-center py-16 reveal-up block"
          href="journal-post.html?slug=${encodeURIComponent(post.slug)}">
         <div class="md:col-span-6 journal-img overflow-hidden aspect-[16/10] bg-surface-low">
-          ${post.coverImageUrl
-            ? `<img alt="${post.title}" class="w-full h-full object-cover" loading="lazy" src="${post.coverImageUrl}?w=1200&q=80&auto=format"/>`
-            : '<div class="w-full h-full bg-surface"></div>'}
+          <img alt="${post.title}" class="w-full h-full object-cover" loading="lazy" src="${coverSrc(post, 1200)}"/>
         </div>
         <div class="md:col-span-6 space-y-7 md:pl-20">
           <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">${post.category || 'Journal'}</span>
@@ -273,9 +284,7 @@
       <a class="journal-card group grid grid-cols-1 md:grid-cols-12 gap-gutter items-center py-16 reveal-up block${borderTop ? ' border-t border-white/5' : ''}"
          href="journal-post.html?slug=${encodeURIComponent(post.slug)}">
         <div class="md:col-span-4 journal-img overflow-hidden aspect-[4/3] bg-surface-low">
-          ${post.coverImageUrl
-            ? `<img alt="${post.title}" class="w-full h-full object-cover" loading="lazy" src="${post.coverImageUrl}?w=800&q=80&auto=format"/>`
-            : '<div class="w-full h-full bg-surface"></div>'}
+          <img alt="${post.title}" class="w-full h-full object-cover" loading="lazy" src="${coverSrc(post, 800)}"/>
         </div>
         <div class="md:col-span-8 space-y-6 md:pl-16">
           <span class="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold">${post.category || 'Journal'}</span>
