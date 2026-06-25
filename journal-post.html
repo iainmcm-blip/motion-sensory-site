@@ -218,6 +218,9 @@
         if (def && def._type === 'link') {
           t = `<a href="${def.href}" target="_blank" rel="noopener noreferrer">${t}</a>`;
         }
+        if (def && def._type === 'textColor' && def.color) {
+          t = `<span style="color:${def.color}">${t}</span>`;
+        }
       });
       return t;
     }).join('');
